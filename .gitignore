@@ -1,0 +1,4 @@
+node_modules/
+deck/preview-*.png
+deck/_*
+*.log

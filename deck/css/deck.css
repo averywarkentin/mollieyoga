@@ -1,0 +1,64 @@
+@import url("../../assets/fonts/fonts.css");
+
+/* ============================================================
+   MOLLIE YOGA — Brand Concepts Deck
+   Page system: 1280 x 720 (16:9). One .page == one PDF page.
+   ============================================================ */
+
+*{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+html,body{background:#1a1a1a;}
+body{font-family:'Space Grotesk',sans-serif;}
+
+.page{
+  position:relative;
+  width:1280px;height:720px;
+  overflow:hidden;
+  page-break-after:always;
+  break-after:page;
+}
+.page:last-child{page-break-after:auto;}
+
+/* film-grain overlay for the watercolour / abstract-photo feel */
+.grain::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:url("../../assets/grain.png");
+  background-repeat:repeat;background-size:160px 160px;
+  opacity:.9;z-index:40;
+}
+.paper-grain::after{opacity:.55;}
+
+/* shared layout helpers */
+.pad{position:absolute;inset:0;padding:64px 76px;z-index:10;}
+.row{display:flex;}
+.col{display:flex;flex-direction:column;}
+.eyebrow{font-family:'Space Grotesk';font-weight:500;letter-spacing:.34em;text-transform:uppercase;font-size:12px;}
+.pagenum{position:absolute;bottom:30px;right:40px;font-family:'Space Grotesk';font-size:11px;letter-spacing:.25em;z-index:50;opacity:.6;}
+.tag-foot{position:absolute;bottom:30px;left:76px;font-family:'Space Grotesk';font-size:11px;letter-spacing:.28em;text-transform:uppercase;z-index:50;opacity:.6;}
+
+/* swatch */
+.swatches{display:flex;gap:0;border-radius:14px;overflow:hidden;flex:none;}
+.sw{flex:1;height:150px;display:flex;flex-direction:column;justify-content:flex-end;padding:14px 14px;}
+.sw .nm{font-family:'Space Grotesk';font-weight:600;font-size:13px;line-height:1.15;}
+.sw .hx{font-family:'Space Mono','Space Grotesk';font-size:10.5px;letter-spacing:.05em;opacity:.85;margin-top:3px;}
+
+/* device mockups */
+.phone{width:236px;height:494px;border-radius:30px;padding:9px;background:#0c0c0c;box-shadow:0 24px 50px -18px rgba(0,0,0,.5);position:relative;flex:none;}
+.phone .screen{width:100%;height:100%;border-radius:22px;overflow:hidden;position:relative;background:#fff;}
+.phone .notch{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:64px;height:5px;border-radius:3px;background:rgba(255,255,255,.55);z-index:6;}
+
+.browser{border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -22px rgba(0,0,0,.55);background:#fff;}
+.browser .bar{height:34px;display:flex;align-items:center;gap:7px;padding:0 14px;background:#e9e7e2;}
+.browser .dot{width:10px;height:10px;border-radius:50%;}
+.browser .url{margin-left:10px;font-family:'Space Mono';font-size:10px;color:#7a766e;background:#fff;border-radius:20px;padding:4px 14px;}
+
+/* IG profile grid cell */
+.iggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+.igcell{aspect-ratio:1/1;overflow:hidden;position:relative;}
+
+/* curved-text + abstract photo helpers reused across concepts */
+.absphoto{position:relative;overflow:hidden;}
+.absphoto .gr{position:absolute;inset:0;}
+
+h1,h2,h3{font-weight:inherit;}
+.serif{font-family:'Fraunces';}
+.mono{font-family:'Space Mono';}
