@@ -2,3 +2,5 @@ node_modules/
 deck/preview-*.png
 deck/_*
 *.log
+deck/webtop.png
+deck/webmobile.png

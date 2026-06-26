@@ -424,3 +424,58 @@ pages = cover()+overview()+board_page()+build_concept(C1)+build_concept(C2)+buil
 with open("deck/index.html","w") as f:
     f.write(HEAD+pages+"</body></html>")
 print("wrote deck/index.html ; pages =", PAGE)
+
+# ============================================================ SELF-CONTAINED WEB BUILD
+# One file, no binary deps: Google Fonts via <link>, grain inlined as base64,
+# responsive scaling + scroll-snap. Pushable through the GitHub API as plain text.
+import base64, re, os
+def build_web():
+    deckcss = open("deck/css/deck.css").read()
+    deckcss = re.sub(r'@import url\([^)]*\);', '', deckcss)               # drop self-hosted font import
+    grain_b64 = base64.b64encode(open("assets/grain.png","rb").read()).decode()
+    deckcss = deckcss.replace('url("../../assets/grain.png")', f'url("data:image/png;base64,{grain_b64}")')
+    gfonts = ("https://fonts.googleapis.com/css2?"
+      "family=Bricolage+Grotesque:opsz,wght@12..96,200..800&"
+      "family=DM+Sans:opsz,wght@9..40,300..700&"
+      "family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&"
+      "family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400&"
+      "family=Spectral:ital,wght@0,400;0,600;1,400;1,500&display=swap")
+    web_css = """
+    :root{--scale:1}
+    html,body{background:#16110c;margin:0}
+    body{overflow-x:hidden}
+    .webwrap{display:flex;flex-direction:column;align-items:center;gap:18px;padding:74px 0 60px}
+    .page{transform:scale(var(--scale));transform-origin:top center;
+      margin-bottom:calc((var(--scale) - 1) * 720px);
+      border-radius:6px;box-shadow:0 30px 80px -30px rgba(0,0,0,.7);page-break-after:auto;break-after:auto}
+    .topbar{position:fixed;top:0;left:0;right:0;height:50px;z-index:999;display:flex;align-items:center;
+      justify-content:space-between;padding:0 22px;background:rgba(20,13,8,.82);backdrop-filter:blur(8px);
+      color:#F1ECE8;font-family:'DM Sans',sans-serif}
+    .topbar .t{font-weight:600;font-size:14px;letter-spacing:.02em}
+    .topbar .n{font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.7}
+    .topbar a{color:#F1ECE8;text-decoration:none;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+      border:1px solid rgba(241,236,232,.4);border-radius:20px;padding:6px 14px}
+    @media print{.topbar{display:none}.webwrap{padding:0;gap:0}.page{transform:none;margin:0;box-shadow:none}}
+    """
+    scaler = """
+    <script>
+    function fit(){var pad=window.innerWidth<760?16:48;
+      var s=Math.min((window.innerWidth-pad)/1280, 1.0);
+      document.documentElement.style.setProperty('--scale', s);}
+    window.addEventListener('resize',fit); fit();
+    </script>"""
+    topbar = ('<div class="topbar"><span class="t">Mollie Yoga — Brand Concepts</span>'
+      '<span class="n">Studio Soma · Nalu · Grove</span>'
+      '<a href="MollieYoga-Brand-Concepts.pdf">PDF ↓</a></div>')
+    head = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
+      '<meta name="viewport" content="width=device-width, initial-scale=1">'
+      '<title>Mollie Yoga — Brand Concepts</title>'
+      '<meta name="description" content="Three brand directions for Mollie Yoga, built from her Pinterest board.">'
+      f'<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+      f'<link rel="stylesheet" href="{gfonts}">'
+      f'<style>{deckcss}\n{CSS}\n{web_css}</style></head><body>'
+      f'{topbar}<div class="webwrap">')
+    with open("index.html","w") as f:
+        f.write(head + pages + "</div>" + scaler + "</body></html>")
+    print("wrote index.html (self-contained web) ; size KB:", round(os.path.getsize("index.html")/1024,1))
+build_web()
