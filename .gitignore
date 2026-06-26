@@ -1,0 +1,4 @@
+node_modules/
+deck/index.html
+deck/*.png
+deck/*.pdf
