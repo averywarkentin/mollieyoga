@@ -3,1001 +3,1146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mollie Yoga — Brand Concepts 2025</title>
+<title>Mollie Yoga · Brand Concepts 2025</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Syne:wght@600;700;800&family=Unbounded:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:#d9d9d4;font-family:'Space Grotesk',sans-serif;color:#16161c;-webkit-font-smoothing:antialiased;}
-img{display:block;max-width:100%;height:auto;}
-
-/* ============ TOKENS ============ */
-:root{
-  --mx:80px;             /* page margin */
-  --rhythm:104px;        /* section vertical rhythm */
-  --gap:20px;            /* grid gap */
-  --fs-ey:12px;          /* eyebrow */
-  --fs-cap:13px;         /* captions */
-  --fs-body:16px;        /* body */
+:root {
+  --paper:#EFEAE0; --sage:#93B08C; --blue:#86A9C7;
+  --lav:#9E8CC4; --ochre:#E3A23E; --pine:#41674F;
+  --mx:80px; --gap:20px; --rhythm:96px;
 }
-@media(max-width:1100px){:root{--mx:32px;--rhythm:72px;}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#141412;font-family:'Space Grotesk',sans-serif;color:var(--paper);}
 
-/* ============ NAV ============ */
-.nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:16px var(--mx);background:rgba(20,20,24,.94);backdrop-filter:blur(14px);}
-.nav-brand{font-size:var(--fs-ey);font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:#fff;}
-.nav-tabs{display:flex;gap:8px;}
-.nav-tabs a{padding:9px 18px;border-radius:100px;font-size:var(--fs-ey);font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.6);border:1.5px solid rgba(255,255,255,.22);transition:all .18s;}
-.nav-tabs a.t1:hover,.nav-tabs a.t1.active{background:#6a2be8;border-color:#6a2be8;color:#fff;}
-.nav-tabs a.t2:hover,.nav-tabs a.t2.active{background:#ff2e63;border-color:#ff2e63;color:#fff;}
-.nav-tabs a.t3:hover,.nav-tabs a.t3.active{background:#2b3cf5;border-color:#2b3cf5;color:#fff;}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:0 var(--mx);height:52px;background:#0e0e0c;border-bottom:1px solid #222;}
+.nav-brand{font-family:'Archivo',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#555;}
+.nav-tabs{display:flex;gap:4px;}
+.nav-tabs a{padding:6px 18px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;text-decoration:none;color:#666;transition:background .15s,color .15s;}
+.nav-tabs .t1:hover{background:var(--pine);color:var(--paper);}
+.nav-tabs .t2:hover{background:var(--blue);color:var(--pine);}
+.nav-tabs .t3:hover{background:var(--lav);color:var(--paper);}
 
-/* ============ CONCEPT HEADER (consistent) ============ */
-.chead{padding:48px var(--mx) 40px;display:grid;grid-template-columns:auto 1fr;column-gap:32px;row-gap:8px;align-items:end;border-bottom:2px solid currentColor;}
-.chead .cnum{font-family:'Unbounded',sans-serif;font-weight:800;font-size:84px;line-height:.8;letter-spacing:-.04em;grid-row:span 2;}
-.chead .cname{font-weight:700;font-size:14px;letter-spacing:.3em;text-transform:uppercase;align-self:end;}
-.chead .cdesc{font-size:15px;line-height:1.5;max-width:680px;opacity:.7;}
+.concept{padding:var(--rhythm) var(--mx);}
+.concept+.concept{border-top:1px solid #222;}
 
-/* ============ SHARED SECTION ============ */
-.section{padding:var(--rhythm) var(--mx);}
-.shead{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:34px;}
-.shead .eyebrow{font-size:var(--fs-ey);font-weight:700;letter-spacing:.26em;text-transform:uppercase;}
-.shead .note{font-size:var(--fs-ey);font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.5;}
-.lead{font-size:var(--fs-body);line-height:1.6;max-width:640px;margin:-16px 0 34px;opacity:.7;}
+.shead{margin-bottom:28px;}
+.shead .ey{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#555;margin-bottom:6px;}
+.shead h3{font-family:'Archivo',sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#888;}
+.section{margin-bottom:var(--rhythm);}
 
-/* grids */
-.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gap);}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
-@media(max-width:1100px){.g5{grid-template-columns:repeat(2,1fr);}.g4{grid-template-columns:repeat(2,1fr);}.g2{grid-template-columns:1fr;gap:32px;}}
-
-/* card + caption */
-.card .cap{margin-top:12px;font-size:var(--fs-cap);line-height:1.4;}
-.card .cap b{display:block;font-weight:700;letter-spacing:.02em;}
-.card .cap span{opacity:.55;font-size:12px;letter-spacing:.08em;text-transform:uppercase;}
-
-/* PHOTO PLATE — plain photo base + branding on top */
-.plate{position:relative;overflow:hidden;border-radius:5px;background:var(--ac,#333);}
+.plate{position:relative;overflow:hidden;border-radius:4px;}
+.plate-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:grayscale(100%) contrast(1.06) brightness(.9);}
+.plate .wash{position:absolute;inset:0;}
+.plate .art{position:absolute;inset:0;z-index:2;pointer-events:none;}
+.plate .copy{position:absolute;inset:0;padding:20px;display:flex;flex-direction:column;z-index:3;}
 .r45{aspect-ratio:4/5;}
 .r916{aspect-ratio:9/16;}
-.r11{aspect-ratio:1/1;}
-.r169{aspect-ratio:16/9;}
-.plate-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(100%) contrast(1.06) brightness(.96);}
-.plate .wash{position:absolute;inset:0;}
-.plate .copy{position:absolute;inset:0;padding:22px;display:flex;flex-direction:column;z-index:3;}
-.plate .copy.center{align-items:center;justify-content:center;text-align:center;}
-.plate .art{position:absolute;inset:0;z-index:2;pointer-events:none;}
 
-/* palette swatches */
-.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
-.sw{border-radius:8px;padding:14px;height:150px;display:flex;flex-direction:column;justify-content:flex-end;}
-.sw .nm{font-size:13px;font-weight:700;line-height:1.2;}
-.sw .hx{font-size:12px;font-weight:500;opacity:.7;margin-top:4px;letter-spacing:.04em;}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gap);}
+.card .cap{margin-top:9px;display:flex;justify-content:space-between;font-size:10px;color:#555;}
+.card .cap b{color:#888;font-weight:500;}
 
-/* type specimen block */
-.specimen .big{line-height:.92;letter-spacing:-.02em;}
-.specimen .id{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-top:14px;}
-.specimen .id+.big{margin-top:34px;}
-
-/* brand mark row */
-.markrow{display:grid;grid-template-columns:240px 1fr;gap:56px;align-items:center;}
-@media(max-width:1100px){.markrow{grid-template-columns:1fr;gap:28px;}}
-.markrow .desc h4{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-bottom:14px;}
-.markrow .desc p{font-size:var(--fs-body);line-height:1.65;max-width:460px;opacity:.78;}
-
-/* accent dots */
-.accents{display:flex;flex-wrap:wrap;gap:14px 22px;}
-.acc{display:flex;align-items:center;gap:9px;}
-.acc .dot{width:22px;height:22px;border-radius:50%;flex:0 0 auto;}
-.acc b{font-size:13px;font-weight:700;}
-.acc span{font-size:12px;opacity:.6;margin-left:2px;}
-
-/* mantra band */
-.mantra{padding:64px var(--mx);}
-.mantra .q{line-height:1.05;letter-spacing:-.02em;}
-.mantra .src{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-top:22px;}
-
-/* footer */
-.foot{background:#141418;padding:48px var(--mx);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
-.foot span{font-size:var(--fs-ey);letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.4);}
-.foot a{font-size:var(--fs-ey);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;margin-left:22px;}
-
-/* ====================================================================
-   01 · IN FLOW — cool electric · kinetic gradients + flowing line-work
-   Palette: Indigo #141A3C · Cool White #F3F4FB · Violet #6A2BE8 · Aqua #14CFC0 · Coral #FF5A3C
-   Type: Unbounded (display) + Space Grotesk (body)
-==================================================================== */
-#c1{--ink:#141a3c;--paper:#f3f4fb;--violet:#6a2be8;--aqua:#14cfc0;--coral:#ff5a3c;background:var(--paper);color:var(--ink);}
-#c1 .chead{color:var(--ink);}
-#c1 h2,#c1 h3,#c1 .disp{font-family:'Unbounded',sans-serif;font-weight:800;}
-
-.c1-hero{position:relative;min-height:640px;border-radius:0;overflow:hidden;background:var(--ink);margin-top:56px;}
-.c1-hero .plate-img{filter:grayscale(100%) contrast(1.1) brightness(.55);}
-.c1-hero .wash{background:linear-gradient(115deg,rgba(106,43,232,.86) 0%,rgba(20,26,60,.5) 45%,rgba(20,207,192,.5) 100%);}
-.c1-hero .copy{padding:64px var(--mx);justify-content:space-between;}
-.c1-hero .kick{font-size:13px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:#fff;}
-.c1-hero h1{font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(72px,12vw,164px);line-height:.82;letter-spacing:-.04em;color:#fff;}
-.c1-hero .tagline{font-size:18px;font-weight:500;letter-spacing:.02em;color:rgba(255,255,255,.9);max-width:420px;}
-
-/* ====================================================================
-   02 · BLOOM — hot pop poster · big condensed type + marker scribbles
-   Palette: Ink #141414 · White #FFFFFF · Magenta #FF2E63 · Tangerine #FF7A1A · Acid Yellow #FFD000
-   Type: Anton (display) + Space Grotesk (body)
-==================================================================== */
-#c2{--ink:#141414;--paper:#ffffff;--mag:#ff2e63;--tang:#ff7a1a;--yellow:#ffd000;background:var(--paper);color:var(--ink);}
-#c2 .chead{color:var(--ink);}
-#c2 .disp,#c2 h2,#c2 h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;}
-
-.c2-hero{position:relative;min-height:640px;overflow:hidden;background:var(--ink);margin-top:0;}
-.c2-hero .plate-img{filter:grayscale(100%) contrast(1.15) brightness(.6);}
-.c2-hero .wash{background:linear-gradient(180deg,rgba(20,20,20,.35),rgba(20,20,20,.55));}
-.c2-hero .copy{padding:56px var(--mx);justify-content:center;}
-.c2-hero .kick{display:inline-block;width:fit-content;background:var(--yellow);color:var(--ink);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:7px 14px;}
-.c2-hero h1{font-family:'Anton',sans-serif;font-size:clamp(96px,18vw,280px);line-height:.78;text-transform:uppercase;color:#fff;letter-spacing:.005em;margin:18px 0;}
-.c2-hero h1 .mg{color:var(--mag);}
-.c2-hero .tagline{font-size:18px;font-weight:500;color:#fff;max-width:480px;}
-
-/* ====================================================================
-   03 · TALISMAN — Swiss graphic · flat shapes + geometric marks
-   Palette: Cobalt #2B3CF5 · Ink #0D0E16 · White #FFFFFF · Orange #FF6A00 · Mist #DADDFF
-   Type: Syne (display) + Space Grotesk (body)
-==================================================================== */
-#c3{--cobalt:#2b3cf5;--ink:#0d0e16;--paper:#ffffff;--orange:#ff6a00;--mist:#daddff;background:var(--paper);color:var(--ink);}
-#c3 .chead{color:var(--ink);}
-#c3 .disp,#c3 h2,#c3 h3{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-.01em;}
-
-.c3-hero{position:relative;min-height:640px;overflow:hidden;background:var(--cobalt);}
-.c3-hero .plate-img{filter:grayscale(100%) contrast(1.1) brightness(.7);mix-blend-mode:luminosity;opacity:.5;}
-.c3-hero .wash{background:linear-gradient(135deg,rgba(43,60,245,.6),rgba(13,14,22,.25));}
-.c3-hero .copy{padding:64px var(--mx);justify-content:space-between;}
-.c3-hero .kick{font-size:13px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--mist);}
-.c3-hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(80px,13vw,180px);line-height:.84;color:#fff;letter-spacing:-.02em;}
-.c3-hero h1 .o{color:var(--orange);}
-.c3-hero .tagline{font-size:18px;font-weight:500;color:var(--mist);max-width:440px;}
+.big{font-family:'Archivo',sans-serif;font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:-.01em;}
+.ey{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <span class="nav-brand">Mollie Yoga · Brand Concepts 2025</span>
   <div class="nav-tabs">
-    <a href="#c1" class="t1">01 · In Flow</a>
-    <a href="#c2" class="t2">02 · Bloom</a>
+    <a href="#c1" class="t1">01 · Force</a>
+    <a href="#c2" class="t2">02 · Field</a>
     <a href="#c3" class="t3">03 · Talisman</a>
   </div>
 </nav>
 
-<!-- ════════════════════════════════════════════════════════════════
-     01 · IN FLOW
-════════════════════════════════════════════════════════════════ -->
-<section id="c1">
-
-<div class="chead">
-  <div class="cnum">01</div>
-  <div class="cname">In Flow</div>
-  <div class="cdesc">Cool-electric gradients and continuous flowing line-work. Movement made visible — kinetic, confident, alive.</div>
-</div>
+<!-- ═══════════════════════════════════════════════════
+     CONCEPT 01 · FORCE — Bold / Graphic / Dense
+═══════════════════════════════════════════════════ -->
+<section id="c1" class="concept">
 
 <!-- HERO -->
-<div class="c1-hero">
-  <img class="plate-img" src="https://i.pinimg.com/1200x/40/ed/45/40ed45ec6eb952193ca6cca54fe75037.jpg" alt="">
-  <div class="wash"></div>
-  <div class="art">
-    <svg width="100%" height="100%" viewBox="0 0 1200 640" preserveAspectRatio="none">
-      <path d="M-20 470 C 200 360, 360 580, 600 460 S 1000 320, 1240 440" fill="none" stroke="#14cfc0" stroke-width="6" stroke-linecap="round" opacity=".9"/>
-      <path d="M-20 510 C 220 410, 380 620, 620 500 S 1020 360, 1240 480" fill="none" stroke="#ff5a3c" stroke-width="4" stroke-linecap="round" opacity=".8"/>
-      <circle cx="1060" cy="150" r="64" fill="none" stroke="#14cfc0" stroke-width="5"/>
-      <circle cx="1060" cy="150" r="10" fill="#ff5a3c"/>
+<div style="position:relative;overflow:hidden;border-radius:6px;height:460px;margin-bottom:var(--rhythm);background:var(--pine);">
+  <!-- Giant M letterform masking a photo -->
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-start;padding-left:40px;">
+    <svg width="620" height="460" viewBox="0 0 620 460" style="overflow:visible;">
+      <defs>
+        <clipPath id="cm1">
+          <text x="10" y="420" font-family="Archivo,sans-serif" font-weight="900" font-size="480" letter-spacing="-20">M</text>
+        </clipPath>
+      </defs>
+      <image href="https://i.pinimg.com/1200x/40/ed/45/40ed45ec6eb952193ca6cca54fe75037.jpg"
+        x="0" y="0" width="620" height="460" preserveAspectRatio="xMidYMid slice"
+        clip-path="url(#cm1)" style="filter:grayscale(1) contrast(1.1) brightness(.85);"/>
     </svg>
   </div>
-  <div class="copy">
-    <div class="kick">Direction 01 · Mollie Yoga</div>
+  <!-- Ochre rule + label overlay -->
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:44px 52px;display:flex;justify-content:space-between;align-items:flex-end;">
     <div>
-      <h1>IN<br>FLOW</h1>
-      <div class="tagline" style="margin-top:26px;">Yoga in Bristol &amp; online. Breath, movement, momentum.</div>
+      <div style="width:48px;height:3px;background:var(--ochre);margin-bottom:18px;"></div>
+      <div class="big" style="font-size:64px;color:var(--paper);">MOLLIE<br>YOGA</div>
     </div>
-  </div>
-</div>
-
-<!-- PALETTE + TYPE -->
-<div class="section g2">
-  <div>
-    <div class="shead"><span class="eyebrow">Colour — 5 only</span></div>
-    <div class="swatches">
-      <div class="sw" style="background:#141a3c;"><span class="nm" style="color:#fff;">Indigo</span><span class="hx" style="color:#fff;">#141A3C</span></div>
-      <div class="sw" style="background:#6a2be8;"><span class="nm" style="color:#fff;">Violet</span><span class="hx" style="color:#fff;">#6A2BE8</span></div>
-      <div class="sw" style="background:#14cfc0;"><span class="nm">Aqua</span><span class="hx">#14CFC0</span></div>
-      <div class="sw" style="background:#ff5a3c;"><span class="nm" style="color:#fff;">Coral</span><span class="hx" style="color:#fff;">#FF5A3C</span></div>
-      <div class="sw" style="background:#f3f4fb;border:1px solid rgba(0,0,0,.1);"><span class="nm">Cool White</span><span class="hx">#F3F4FB</span></div>
-    </div>
-  </div>
-  <div class="specimen">
-    <div class="shead"><span class="eyebrow">Typography</span></div>
-    <div class="disp big" style="font-size:64px;color:var(--ink);">FLOW<br>STATE</div>
-    <div class="id" style="color:var(--violet);">Unbounded — Display / 900</div>
-    <div class="big" style="font-size:21px;font-weight:500;color:var(--ink);opacity:.8;margin-top:24px;">Clear, modern body copy for schedules, bios and booking. No italics — momentum comes from weight and scale.</div>
-    <div class="id" style="color:var(--violet);">Space Grotesk — Body / 400–600</div>
-  </div>
-</div>
-
-<!-- BRAND MARK -->
-<div class="section markrow" style="padding-top:0;">
-  <div>
-    <svg viewBox="0 0 220 220" width="220" height="220">
-      <defs><linearGradient id="c1g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6a2be8"/><stop offset="1" stop-color="#14cfc0"/></linearGradient></defs>
-      <rect width="220" height="220" rx="18" fill="#141a3c"/>
-      <path d="M44 132 C 44 86, 96 86, 110 110 C 124 134, 176 134, 176 88" fill="none" stroke="url(#c1g)" stroke-width="14" stroke-linecap="round"/>
-      <circle cx="176" cy="88" r="9" fill="#ff5a3c"/>
-      <text x="110" y="186" text-anchor="middle" font-family="Unbounded" font-weight="700" font-size="20" fill="#fff" letter-spacing="2">MOLLIE</text>
-    </svg>
-  </div>
-  <div class="desc">
-    <h4>Brand Mark — original</h4>
-    <h3 class="disp" style="font-size:34px;color:var(--ink);margin-bottom:14px;">The flow stroke</h3>
-    <p>One continuous gradient stroke that rises, crosses and lifts — an exhale becoming an inhale. Violet melts into aqua; a coral node marks the turn. Built as a single path so it animates, embroiders or stamps cleanly.</p>
-  </div>
-</div>
-
-<!-- ACCENT SYSTEM -->
-<div class="section" style="padding-top:0;">
-  <div class="shead"><span class="eyebrow">Accent System — chakra &amp; element</span><span class="note">core palette holds · accent flexes per class</span></div>
-  <p class="lead">A themed class adds one accent — a coloured stroke or node over the same flow mark — so each week reads as the same brand, retuned.</p>
-  <div class="g2" style="gap:40px;">
-    <div class="accents">
-      <div class="acc"><span class="dot" style="background:#c0392b;"></span><b>Root</b><span>Muladhara</span></div>
-      <div class="acc"><span class="dot" style="background:#e8722b;"></span><b>Sacral</b><span>Svadhisthana</span></div>
-      <div class="acc"><span class="dot" style="background:#f0c419;"></span><b>Solar</b><span>Manipura</span></div>
-      <div class="acc"><span class="dot" style="background:#4fb477;"></span><b>Heart</b><span>Anahata</span></div>
-      <div class="acc"><span class="dot" style="background:#3fa7d6;"></span><b>Throat</b><span>Vishuddha</span></div>
-      <div class="acc"><span class="dot" style="background:#3b5ba5;"></span><b>Third Eye</b><span>Ajna</span></div>
-      <div class="acc"><span class="dot" style="background:#8e6fc4;"></span><b>Crown</b><span>Sahasrara</span></div>
-      <div class="acc"><span class="dot" style="background:#e8552b;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px #e8552b;"></span><b>Fire</b><span>backbends</span></div>
-      <div class="acc"><span class="dot" style="background:#6fa368;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px #6fa368;"></span><b>Earth</b><span>standing</span></div>
-      <div class="acc"><span class="dot" style="background:#8fbedb;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px #8fbedb;"></span><b>Air</b><span>pranayama</span></div>
-      <div class="acc"><span class="dot" style="background:#4a82c2;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px #4a82c2;"></span><b>Water</b><span>hip openers</span></div>
-    </div>
-    <div class="g5" style="grid-template-columns:1fr 1fr;gap:var(--gap);">
-      <div class="card">
-        <div class="plate r45" style="--ac:#141a3c;">
-          <img class="plate-img" src="https://i.pinimg.com/1200x/35/da/04/35da049d282e0646096d8aec0b6a78d3.jpg" alt="">
-          <div class="wash" style="background:linear-gradient(180deg,rgba(79,180,119,.78),rgba(20,26,60,.6));"></div>
-          <div class="art"><svg width="100%" height="100%" viewBox="0 0 200 250" preserveAspectRatio="none"><path d="M0 180 C 50 150, 90 210, 200 165" fill="none" stroke="#4fb477" stroke-width="5" stroke-linecap="round"/></svg></div>
-          <div class="copy" style="justify-content:space-between;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;border:1.5px solid rgba(255,255,255,.6);border-radius:100px;padding:5px 11px;align-self:flex-start;">Heart · Anahata</span>
-            <div class="disp" style="font-size:26px;color:#fff;">HEART<br>OPENING</div>
-          </div>
-        </div>
-        <div class="cap"><b>Heart chakra accent</b><span>4:5 grid</span></div>
-      </div>
-      <div class="card">
-        <div class="plate r45" style="--ac:#141a3c;">
-          <img class="plate-img" src="https://i.pinimg.com/1200x/49/37/d2/4937d24aab2384d820d8be4e86ba1e88.jpg" alt="">
-          <div class="wash" style="background:linear-gradient(180deg,rgba(232,85,43,.78),rgba(20,26,60,.55));"></div>
-          <div class="art"><svg width="100%" height="100%" viewBox="0 0 200 250" preserveAspectRatio="none"><path d="M0 175 C 50 145, 90 205, 200 160" fill="none" stroke="#ffd000" stroke-width="5" stroke-linecap="round"/></svg></div>
-          <div class="copy" style="justify-content:space-between;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;border:1.5px solid rgba(255,255,255,.6);border-radius:100px;padding:5px 11px;align-self:flex-start;">Fire · element</span>
-            <div class="disp" style="font-size:26px;color:#fff;">SUN<br>SERIES</div>
-          </div>
-        </div>
-        <div class="cap"><b>Fire element accent</b><span>backbends · 4:5</span></div>
+    <div style="text-align:right;">
+      <div class="ey" style="color:var(--ochre);margin-bottom:6px;">Concept 01</div>
+      <div class="big" style="font-size:22px;color:var(--paper);">FORCE</div>
+      <div style="font-size:13px;color:var(--paper);opacity:.55;margin-top:10px;max-width:260px;line-height:1.5;">
+        Bold. Graphic. Unapologetic. Type as architecture, photography as material.
       </div>
     </div>
   </div>
+  <!-- Geometric accent — lavender bar right edge -->
+  <div style="position:absolute;top:0;right:0;width:6px;height:100%;background:var(--lav);"></div>
 </div>
 
 <!-- GRID POSTS -->
-<div class="section" style="padding-top:0;">
-  <div class="shead"><span class="eyebrow">Instagram — Grid Posts</span><span class="note">5 templates · 4:5</span></div>
+<div class="section">
+  <div class="shead"><div class="ey">01 · Force</div><h3>Grid Posts · 4:5</h3></div>
   <div class="g5">
-    <!-- 1 -->
+
+    <!-- 1. NEW CLASS -->
     <div class="card">
-      <div class="plate r45" style="--ac:#6a2be8;">
-        <img class="plate-img" src="https://i.pinimg.com/1200x/14/39/4c/14394caab95f6c6df925c7e7491af7c1.jpg" alt="">
-        <div class="wash" style="background:linear-gradient(180deg,rgba(106,43,232,.82),rgba(20,26,60,.55));"></div>
-        <div class="art"><svg width="100%" height="100%" viewBox="0 0 200 250" preserveAspectRatio="none"><path d="M-5 60 C 60 30, 120 90, 205 55" fill="none" stroke="#14cfc0" stroke-width="5" stroke-linecap="round"/></svg></div>
+      <div class="plate r45" style="background:var(--pine);">
         <div class="copy" style="justify-content:space-between;">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#14cfc0;">New class</span>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="ey" style="color:var(--sage);">New</span>
+            <svg width="20" height="20" viewBox="0 0 20 20"><line x1="4" y1="10" x2="16" y2="10" stroke="#93B08C" stroke-width="1.5"/><line x1="11" y1="5" x2="16" y2="10" stroke="#93B08C" stroke-width="1.5"/><line x1="11" y1="15" x2="16" y2="10" stroke="#93B08C" stroke-width="1.5"/></svg>
+          </div>
           <div>
-            <div class="disp" style="font-size:30px;color:#fff;">SLOW<br>FLOW</div>
-            <div style="font-size:13px;font-weight:600;color:#fff;margin-top:10px;">Sundays · 10am</div>
+            <div class="big" style="font-size:46px;color:var(--paper);">POWER<br>FLOW</div>
+            <div style="background:var(--ochre);height:3px;width:100%;margin:16px 0;"></div>
+            <div class="ey" style="font-size:10px;color:var(--paper);opacity:.6;">TUES + THURS · 6PM<br>BONDI JUNCTION</div>
           </div>
         </div>
       </div>
-      <div class="cap"><b>New class announcement</b><span>4:5</span></div>
+      <div class="cap"><b>New Class</b><span>4:5</span></div>
     </div>
-    <!-- 2 -->
-    <div class="card">
-      <div class="plate r45" style="--ac:#141a3c;">
-        <div class="wash" style="background:#141a3c;"></div>
-        <div class="copy">
-          <div class="disp" style="font-size:24px;color:#fff;">THE WEEK</div>
-          <div style="margin-top:16px;display:flex;flex-direction:column;gap:11px;font-size:14px;font-weight:600;color:#fff;">
-            <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.22);padding-bottom:7px;"><span>MON</span><span style="color:#14cfc0;">Vinyasa 7pm</span></div>
-            <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.22);padding-bottom:7px;"><span>WED</span><span style="color:#14cfc0;">Yin 6pm</span></div>
-            <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.22);padding-bottom:7px;"><span>FRI</span><span style="color:#14cfc0;">Slow 9am</span></div>
-            <div style="display:flex;justify-content:space-between;"><span>SUN</span><span style="color:#ff5a3c;">Restore 10am</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="cap"><b>Weekly schedule</b><span>4:5</span></div>
-    </div>
-    <!-- 3 quote -->
-    <div class="card">
-      <div class="plate r45" style="--ac:#14cfc0;">
-        <div class="wash" style="background:linear-gradient(140deg,#6a2be8,#14cfc0);"></div>
-        <div class="copy center">
-          <div class="disp" style="font-size:23px;color:#fff;line-height:1.05;">YOU<br>BECOME<br>WHAT YOU<br>BELIEVE</div>
-          <div style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-top:16px;">Bhagavad Gita</div>
-        </div>
-      </div>
-      <div class="cap"><b>Quote / mantra</b><span>4:5</span></div>
-    </div>
-    <!-- 4 poster -->
-    <div class="card">
-      <div class="plate r45" style="--ac:#141a3c;">
-        <img class="plate-img" src="https://i.pinimg.com/1200x/24/f8/f0/24f8f0df5d2242110b4e6c1231dfae39.jpg" alt="">
-        <div class="wash" style="background:linear-gradient(180deg,rgba(20,26,60,.35),rgba(106,43,232,.8));"></div>
-        <div class="art"><svg width="100%" height="100%" viewBox="0 0 200 250" preserveAspectRatio="none"><circle cx="160" cy="40" r="26" fill="none" stroke="#14cfc0" stroke-width="4"/></svg></div>
-        <div class="copy center" style="justify-content:space-between;">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#14cfc0;">Weekend retreat</span>
-          <div class="disp" style="font-size:28px;color:#fff;">COAST<br>&amp; FLOW</div>
-          <div style="font-size:13px;font-weight:600;color:#fff;">14–16 June · Devon</div>
-        </div>
-      </div>
-      <div class="cap"><b>Poster / advert</b><span>retreat · 4:5</span></div>
-    </div>
-    <!-- 5 recent -->
-    <div class="card">
-      <div class="plate r45" style="--ac:#141a3c;">
-        <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;">
-          <img class="plate-img" style="position:relative;" src="https://i.pinimg.com/1200x/95/82/2d/95822d1c056f0d3ddce0336c3038ef92.jpg" alt="">
-          <img class="plate-img" style="position:relative;" src="https://i.pinimg.com/1200x/11/50/62/1150621c5079010d3443a1010301fcda.jpg" alt="">
-          <img class="plate-img" style="position:relative;" src="https://i.pinimg.com/1200x/30/5d/d7/305dd7be653226ae45ed633fd6fa1c03.jpg" alt="">
-          <div style="background:linear-gradient(135deg,#6a2be8,#14cfc0);display:flex;align-items:center;justify-content:center;"><span class="disp" style="font-size:15px;color:#fff;text-align:center;">THIS<br>MONTH</span></div>
-        </div>
-      </div>
-      <div class="cap"><b>Recent classes / life</b><span>2×2 · 4:5</span></div>
-    </div>
-  </div>
-</div>
 
-<!-- MANTRA BAND -->
-<div class="mantra" style="background:var(--ink);color:#fff;">
-  <div class="q disp" style="font-size:clamp(30px,5vw,68px);color:#fff;">FRIENDLINESS, COMPASSION,<br>DELIGHT — <span style="color:#14cfc0;">UNDISTURBED CALM.</span></div>
-  <div class="src" style="color:rgba(255,255,255,.6);">Yoga Sutras · 1.33</div>
-</div>
-
-<!-- STORIES -->
-<div class="section">
-  <div class="shead"><span class="eyebrow">Instagram — Stories &amp; Reels</span><span class="note">5 templates · 9:16</span></div>
-  <div class="g5">
-    <!-- 1 schedule change -->
+    <!-- 2. WEEKLY SCHEDULE -->
     <div class="card">
-      <div class="plate r916" style="--ac:#141a3c;">
-        <div class="wash" style="background:#141a3c;"></div>
-        <div class="copy">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#14cfc0;">Schedule update</span>
-          <div class="disp" style="font-size:26px;color:#fff;margin-top:10px;">THIS<br>WEEK</div>
-          <div style="margin-top:18px;font-size:14px;font-weight:600;color:#fff;line-height:1.7;">
-            <div style="text-decoration:line-through;opacity:.5;">Wed 6pm — Yin</div>
-            <div style="color:#14cfc0;">→ Mollie covers<br>&nbsp;&nbsp;&nbsp;Thu 6pm</div>
-            <div style="opacity:.7;margin-top:8px;">all else as usual</div>
+      <div class="plate r45" style="background:var(--sage);">
+        <div class="copy" style="justify-content:space-between;">
+          <div class="big" style="font-size:13px;color:var(--pine);letter-spacing:.16em;">WEEKLY<br>SCHEDULE</div>
+          <div style="display:flex;flex-direction:column;gap:8px;width:100%;">
+            <div style="display:flex;justify-content:space-between;padding-bottom:7px;border-bottom:1px solid rgba(65,103,79,.25);">
+              <span class="ey" style="font-size:10px;color:var(--pine);">MON</span><span style="font-size:11px;color:var(--pine);opacity:.8;">Yin · 7AM</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:7px;border-bottom:1px solid rgba(65,103,79,.25);">
+              <span class="ey" style="font-size:10px;color:var(--pine);">TUE</span><span style="font-size:11px;color:var(--pine);opacity:.8;">Power · 6PM</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:7px;border-bottom:1px solid rgba(65,103,79,.25);">
+              <span class="ey" style="font-size:10px;color:var(--pine);">WED</span><span style="font-size:11px;color:var(--pine);opacity:.8;">Restore · 9AM</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:7px;border-bottom:1px solid rgba(65,103,79,.25);">
+              <span class="ey" style="font-size:10px;color:var(--pine);">THU</span><span style="font-size:11px;color:var(--pine);opacity:.8;">Power · 6PM</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:7px;border-bottom:1px solid rgba(65,103,79,.25);">
+              <span class="ey" style="font-size:10px;color:var(--pine);">SAT</span><span style="font-size:11px;color:var(--pine);opacity:.8;">Flow · 8AM</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;">
+              <span class="ey" style="font-size:10px;color:var(--pine);">SUN</span><span style="font-size:11px;color:var(--pine);opacity:.8;">Gentle · 9AM</span>
+            </div>
+          </div>
+          <div class="big" style="font-size:11px;color:var(--pine);letter-spacing:.14em;opacity:.6;">MOLLIE YOGA</div>
+        </div>
+      </div>
+      <div class="cap"><b>Schedule</b><span>4:5</span></div>
+    </div>
+
+    <!-- 3. MANTRA QUOTE (Sutras 2.33) -->
+    <div class="card">
+      <div class="plate r45" style="background:#0e0e0c;">
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="color:var(--lav);">Yoga Sutras 2.33</div>
+          <div>
+            <div class="big" style="font-size:30px;color:var(--paper);">WHEN DISTURBED BY NEGATIVE THOUGHTS,<br>OPPOSITE ONES SHOULD BE THOUGHT OF.</div>
+            <div style="background:var(--lav);height:2px;width:40px;margin-top:20px;"></div>
+          </div>
+          <div class="big" style="font-size:11px;color:var(--paper);opacity:.3;letter-spacing:.18em;">MOLLIE YOGA</div>
+        </div>
+        <!-- geometric accent -->
+        <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:var(--lav);"></div>
+      </div>
+      <div class="cap"><b>Mantra · Sutras 2.33</b><span>4:5</span></div>
+    </div>
+
+    <!-- 4. RETREAT POSTER -->
+    <div class="card">
+      <div class="plate r45" style="--ac:var(--pine);">
+        <img class="plate-img" src="https://i.pinimg.com/1200x/97/81/d9/9781d93f3c2d7cbe5b1d5aba7f4013af.jpg" alt="">
+        <div class="wash" style="background:linear-gradient(to top, var(--pine) 55%, rgba(65,103,79,.5) 100%);"></div>
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 300 375" preserveAspectRatio="none">
+            <rect x="20" y="20" width="260" height="335" fill="none" stroke="#93B08C" stroke-width="1" opacity=".4"/>
+            <line x1="20" y1="120" x2="280" y2="120" stroke="#E3A23E" stroke-width="1.5" opacity=".6"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="color:var(--ochre);">Retreat · Byron Bay</div>
+          <div>
+            <div class="big" style="font-size:36px;color:var(--paper);">SEVEN<br>DAYS<br>AWAKE</div>
+            <div class="ey" style="font-size:10px;color:var(--paper);opacity:.6;margin-top:12px;">14–21 MARCH 2026<br>PLACES LIMITED</div>
           </div>
         </div>
       </div>
-      <div class="cap"><b>Weekly schedule</b><span>shows a cover · 9:16</span></div>
+      <div class="cap"><b>Retreat Poster</b><span>4:5</span></div>
     </div>
-    <!-- 2 invite -->
+
+    <!-- 5. LIFE PHOTOS -->
     <div class="card">
-      <div class="plate r916" style="--ac:#6a2be8;">
-        <img class="plate-img" src="https://i.pinimg.com/1200x/49/37/d2/4937d24aab2384d820d8be4e86ba1e88.jpg" alt="">
-        <div class="wash" style="background:linear-gradient(180deg,rgba(106,43,232,.78),rgba(20,26,60,.65));"></div>
-        <div class="copy center" style="justify-content:space-between;">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#14cfc0;">Workshop</span>
-          <div class="disp" style="font-size:30px;color:#fff;">BREATH<br>LAB</div>
-          <div style="width:100%;background:#14cfc0;color:#141a3c;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:11px 0;border-radius:100px;">Book — swipe up</div>
-        </div>
-      </div>
-      <div class="cap"><b>Invite to book</b><span>event · 9:16</span></div>
-    </div>
-    <!-- 3 reflection -->
-    <div class="card">
-      <div class="plate r916" style="--ac:#141a3c;">
-        <img class="plate-img" src="https://i.pinimg.com/1200x/95/82/2d/95822d1c056f0d3ddce0336c3038ef92.jpg" alt="">
-        <div class="wash" style="background:linear-gradient(180deg,rgba(20,26,60,.1),rgba(20,26,60,.7));"></div>
-        <div class="art"><svg width="100%" height="100%" viewBox="0 0 120 213" preserveAspectRatio="none"><path d="M14 150 C 44 132, 70 168, 106 146" fill="none" stroke="#14cfc0" stroke-width="4" stroke-linecap="round"/></svg></div>
-        <div class="copy" style="justify-content:flex-end;">
-          <div style="font-size:18px;font-weight:600;color:#fff;line-height:1.35;">morning light,<br>slow start.</div>
-          <div style="margin-top:10px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8);">Mollie Yoga</div>
-        </div>
-      </div>
-      <div class="cap"><b>Daily-life reflection</b><span>light · 9:16</span></div>
-    </div>
-    <!-- 4 testimonial -->
-    <div class="card">
-      <div class="plate r916" style="--ac:#14cfc0;">
-        <div class="wash" style="background:linear-gradient(160deg,#14cfc0,#6a2be8);"></div>
-        <div class="copy center">
-          <div style="font-size:20px;font-weight:600;color:#fff;line-height:1.4;">“I leave every class lighter than I arrived.”</div>
-          <div style="margin-top:16px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85);">— Hannah</div>
-        </div>
-      </div>
-      <div class="cap"><b>Testimonial</b><span>feedback · 9:16</span></div>
-    </div>
-    <!-- 5 reel cover -->
-    <div class="card">
-      <div class="plate r916" style="--ac:#141a3c;">
+      <div class="plate r45" style="--ac:var(--lav);">
         <img class="plate-img" src="https://i.pinimg.com/1200x/35/da/04/35da049d282e0646096d8aec0b6a78d3.jpg" alt="">
-        <div class="wash" style="background:linear-gradient(180deg,rgba(20,26,60,.5),rgba(106,43,232,.5))"></div>
-        <div class="copy center" style="justify-content:center;">
-          <svg viewBox="0 0 48 48" width="40" height="40" style="margin-bottom:16px;"><circle cx="24" cy="24" r="17" fill="none" stroke="#fff" stroke-width="2.5"/><path d="M19 16 L33 24 L19 32 Z" fill="#fff"/></svg>
-          <div class="disp" style="font-size:26px;color:#fff;">3 MIN<br>RESET</div>
-          <div style="margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#14cfc0;">Reel · watch</div>
+        <div class="wash" style="background:linear-gradient(160deg, rgba(158,140,196,.7) 0%, rgba(65,103,79,.4) 100%);"></div>
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 300 375">
+            <rect x="0" y="0" width="300" height="375" fill="none" stroke="#EFEAE0" stroke-width="8" opacity=".12"/>
+            <rect x="12" y="12" width="276" height="351" fill="none" stroke="#EFEAE0" stroke-width="1" opacity=".2"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:flex-end;">
+          <div class="big" style="font-size:13px;color:var(--paper);letter-spacing:.14em;">RECENT<br>CLASSES</div>
         </div>
       </div>
-      <div class="cap"><b>Reel cover</b><span>9:16</span></div>
+      <div class="cap"><b>Life / Recent</b><span>4:5</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- STORIES -->
+<div class="section">
+  <div class="shead"><div class="ey">01 · Force</div><h3>Stories · 9:16</h3></div>
+  <div class="g5">
+
+    <!-- S1. SCHEDULE COVER -->
+    <div class="card">
+      <div class="plate r916" style="background:var(--pine);">
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 200 355">
+            <rect x="0" y="0" width="200" height="355" fill="none" stroke="#93B08C" stroke-width="12" opacity=".15"/>
+            <line x1="0" y1="180" x2="200" y2="180" stroke="#E3A23E" stroke-width="2" opacity=".5"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="color:var(--sage);">Mollie Yoga</div>
+          <div>
+            <div class="big" style="font-size:52px;color:var(--paper);">THIS<br>WEEK</div>
+            <div style="background:var(--ochre);height:3px;width:100%;margin:14px 0;"></div>
+            <div class="ey" style="font-size:10px;color:var(--paper);opacity:.6;">MON–SUN · ALL LEVELS</div>
+          </div>
+          <div class="big" style="font-size:10px;color:var(--paper);opacity:.3;letter-spacing:.2em;">@MOLLIEYOGA</div>
+        </div>
+      </div>
+      <div class="cap"><b>Schedule Cover</b><span>9:16</span></div>
+    </div>
+
+    <!-- S2. EVENT BOOKING -->
+    <div class="card">
+      <div class="plate r916" style="background:#0e0e0c;">
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="color:var(--ochre);">Now Open</div>
+          <div>
+            <div class="big" style="font-size:44px;color:var(--paper);">BOOK<br>YOUR<br>SPOT</div>
+            <div style="margin-top:20px;background:var(--pine);padding:16px;border-radius:3px;">
+              <div class="ey" style="font-size:10px;color:var(--sage);margin-bottom:6px;">Byron Bay Retreat</div>
+              <div style="font-size:12px;color:var(--paper);line-height:1.5;opacity:.8;">7 days · 14–21 March<br>All inclusive · 12 spots</div>
+            </div>
+            <div style="margin-top:12px;background:var(--ochre);padding:12px;border-radius:3px;text-align:center;">
+              <span class="big" style="font-size:13px;color:var(--pine);">REGISTER NOW</span>
+            </div>
+          </div>
+          <div class="big" style="font-size:10px;color:var(--paper);opacity:.25;letter-spacing:.18em;">MOLLIE YOGA</div>
+        </div>
+      </div>
+      <div class="cap"><b>Event Booking</b><span>9:16</span></div>
+    </div>
+
+    <!-- S3. DAILY REFLECTION -->
+    <div class="card">
+      <div class="plate r916" style="background:var(--paper);">
+        <div class="copy" style="justify-content:space-between;">
+          <div class="big" style="font-size:11px;color:var(--pine);letter-spacing:.16em;">MOLLIE YOGA</div>
+          <div>
+            <div style="width:32px;height:2px;background:var(--pine);margin-bottom:20px;"></div>
+            <div class="big" style="font-size:22px;color:var(--pine);">BREATHE<br>IN.<br>ARRIVE.</div>
+            <div style="font-size:12px;color:var(--pine);opacity:.55;margin-top:16px;line-height:1.6;">Take this moment.<br>You are already here.</div>
+          </div>
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.35;">DAILY REFLECTION</div>
+        </div>
+      </div>
+      <div class="cap"><b>Daily Reflection</b><span>9:16</span></div>
+    </div>
+
+    <!-- S4. TESTIMONIAL -->
+    <div class="card">
+      <div class="plate r916" style="background:var(--sage);">
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--pine);">Student Love</div>
+          <div>
+            <div class="big" style="font-size:14px;color:var(--pine);line-height:1.2;">"MOLLIE'S CLASS CHANGED HOW I MOVE THROUGH THE WORLD."</div>
+            <div style="background:var(--pine);height:2px;width:30px;margin:16px 0;"></div>
+            <div style="font-size:11px;color:var(--pine);opacity:.7;">— Sarah M., student since 2022</div>
+          </div>
+          <div class="big" style="font-size:10px;color:var(--pine);opacity:.3;letter-spacing:.16em;">MOLLIE YOGA</div>
+        </div>
+      </div>
+      <div class="cap"><b>Testimonial</b><span>9:16</span></div>
+    </div>
+
+    <!-- S5. REEL COVER -->
+    <div class="card">
+      <div class="plate r916" style="background:var(--lav);">
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 200 355">
+            <circle cx="100" cy="155" r="90" fill="none" stroke="#EFEAE0" stroke-width="1" opacity=".25"/>
+            <circle cx="100" cy="155" r="60" fill="none" stroke="#EFEAE0" stroke-width="1" opacity=".2"/>
+            <circle cx="100" cy="155" r="30" fill="none" stroke="#EFEAE0" stroke-width="1" opacity=".2"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--paper);opacity:.7;">Reel</div>
+          <div style="text-align:center;">
+            <div class="big" style="font-size:44px;color:var(--paper);">IN<br>FLOW</div>
+            <div style="font-size:11px;color:var(--paper);opacity:.6;margin-top:10px;letter-spacing:.08em;">with Mollie · @mollieyoga</div>
+          </div>
+          <div class="big" style="font-size:10px;color:var(--paper);opacity:.3;text-align:center;letter-spacing:.16em;">MOLLIE YOGA</div>
+        </div>
+      </div>
+      <div class="cap"><b>Reel Cover</b><span>9:16</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MANTRA BAND -->
+<div class="section">
+  <div class="shead"><div class="ey">01 · Force</div><h3>Mantra Treatments</h3></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);">
+    <div style="background:var(--pine);border-radius:4px;padding:48px 52px;">
+      <div class="ey" style="font-size:10px;color:var(--ochre);margin-bottom:20px;">Yoga Sutras 2.33</div>
+      <div class="big" style="font-size:28px;color:var(--paper);">WHEN DISTURBED BY NEGATIVE THOUGHTS, OPPOSITE ONES SHOULD BE THOUGHT OF.</div>
+      <div style="width:32px;height:3px;background:var(--ochre);margin-top:24px;"></div>
+    </div>
+    <div style="background:#0e0e0c;border-radius:4px;padding:48px 52px;border-left:4px solid var(--lav);">
+      <div class="ey" style="font-size:10px;color:var(--lav);margin-bottom:20px;">Bhagavad Gita</div>
+      <div class="big" style="font-size:26px;color:var(--paper);">IT IS BETTER TO LIVE YOUR OWN DESTINY IMPERFECTLY THAN TO LIVE AN IMITATION WITH PERFECTION.</div>
     </div>
   </div>
 </div>
+
+<!-- CHAKRA DEMO -->
+<div class="section">
+  <div class="shead"><div class="ey">01 · Force</div><h3>Chakra Accent · Root</h3></div>
+  <div style="background:var(--pine);border-radius:4px;padding:36px 44px;display:flex;align-items:center;gap:36px;">
+    <div style="width:56px;height:56px;border-radius:50%;background:#c0392b;flex-shrink:0;"></div>
+    <div>
+      <div class="big" style="font-size:26px;color:var(--paper);">MULADHARA · ROOT</div>
+      <div style="font-size:13px;color:var(--paper);opacity:.6;margin-top:8px;line-height:1.5;">Grounded. Stable. Present. This chakra accent colour activates in Root-themed class posts — Hatha, grounding flows, earth practice.</div>
+    </div>
+    <div style="margin-left:auto;display:flex;gap:10px;">
+      <div style="width:32px;height:32px;border-radius:50%;background:#c0392b;"></div>
+      <div style="width:32px;height:32px;border-radius:50%;background:#e8722b;"></div>
+      <div style="width:32px;height:32px;border-radius:50%;background:#f0c419;"></div>
+      <div style="width:32px;height:32px;border-radius:50%;background:#4fb477;"></div>
+      <div style="width:32px;height:32px;border-radius:50%;background:#3fa7d6;"></div>
+      <div style="width:32px;height:32px;border-radius:50%;background:#3b5ba5;"></div>
+      <div style="width:32px;height:32px;border-radius:50%;background:#8e6fc4;"></div>
+    </div>
+  </div>
+</div>
+
 </section>
 
-<!-- ════════════════════════════════════════════════════════════════
-     02 · BLOOM
-════════════════════════════════════════════════════════════════ -->
-<section id="c2">
-
-<div class="chead">
-  <div class="cnum" style="font-family:'Anton',sans-serif;font-weight:400;">02</div>
-  <div class="cname">Bloom</div>
-  <div class="cdesc">Loud editorial poster energy. Towering condensed type, hot colour and marker-drawn marks. Impossible to scroll past.</div>
-</div>
+<!-- ═══════════════════════════════════════════════════
+     CONCEPT 02 · FIELD — Spacious / Editorial
+═══════════════════════════════════════════════════ -->
+<section id="c2" class="concept">
 
 <!-- HERO -->
-<div class="c2-hero">
-  <img class="plate-img" src="https://i.pinimg.com/1200x/97/81/d9/9781d93f3c2d7cbe5b1d5aba7f4013af.jpg" alt="">
-  <div class="wash"></div>
-  <div class="art">
-    <svg width="100%" height="100%" viewBox="0 0 1200 640" preserveAspectRatio="none">
-      <path d="M120 470 C 320 420, 520 510, 760 450" fill="none" stroke="#ffd000" stroke-width="9" stroke-linecap="round"/>
-      <path d="M860 150 q 40 -34 80 0 t 80 0" fill="none" stroke="#ff2e63" stroke-width="8" stroke-linecap="round"/>
+<div style="position:relative;overflow:hidden;border-radius:6px;height:460px;margin-bottom:var(--rhythm);">
+  <!-- Aurora gradient background -->
+  <div style="position:absolute;inset:0;
+    background:radial-gradient(ellipse at 15% 60%, rgba(134,169,199,.45) 0%, transparent 55%),
+               radial-gradient(ellipse at 75% 30%, rgba(158,140,196,.35) 0%, transparent 50%),
+               radial-gradient(ellipse at 50% 90%, rgba(147,176,140,.4) 0%, transparent 45%),
+               var(--paper);"></div>
+  <!-- Fine-line orbit marks -->
+  <div style="position:absolute;inset:0;">
+    <svg width="100%" height="100%" viewBox="0 0 1440 460" preserveAspectRatio="xMidYMid slice">
+      <ellipse cx="900" cy="230" rx="320" ry="200" fill="none" stroke="#41674F" stroke-width=".8" opacity=".18"/>
+      <ellipse cx="900" cy="230" rx="220" ry="130" fill="none" stroke="#41674F" stroke-width=".6" opacity=".12"/>
+      <circle cx="900" cy="230" r="4" fill="#41674F" opacity=".3"/>
+      <path d="M 200 50 Q 400 20 600 60 Q 800 100 1000 50" fill="none" stroke="#86A9C7" stroke-width=".8" opacity=".3"/>
+      <path d="M 100 400 Q 350 380 600 410 Q 850 440 1100 400" fill="none" stroke="#93B08C" stroke-width=".8" opacity=".25"/>
     </svg>
   </div>
-  <div class="copy">
-    <span class="kick">Direction 02 · Mollie Yoga</span>
-    <h1>BL<span class="mg">OO</span>M</h1>
-    <div class="tagline">Yoga that wakes you up. Bristol &amp; online.</div>
-  </div>
-</div>
-
-<!-- PALETTE + TYPE -->
-<div class="section g2">
-  <div>
-    <div class="shead"><span class="eyebrow">Colour — 5 only</span></div>
-    <div class="swatches">
-      <div class="sw" style="background:#141414;"><span class="nm" style="color:#fff;">Ink</span><span class="hx" style="color:#fff;">#141414</span></div>
-      <div class="sw" style="background:#ff2e63;"><span class="nm" style="color:#fff;">Magenta</span><span class="hx" style="color:#fff;">#FF2E63</span></div>
-      <div class="sw" style="background:#ff7a1a;"><span class="nm" style="color:#fff;">Tangerine</span><span class="hx" style="color:#fff;">#FF7A1A</span></div>
-      <div class="sw" style="background:#ffd000;"><span class="nm">Acid Yellow</span><span class="hx">#FFD000</span></div>
-      <div class="sw" style="background:#ffffff;border:1px solid rgba(0,0,0,.12);"><span class="nm">White</span><span class="hx">#FFFFFF</span></div>
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:56px 64px;">
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pine);opacity:.5;margin-bottom:24px;">Concept 02</div>
+      <div class="big" style="font-size:88px;color:var(--pine);line-height:.85;">MOLLIE<br>YOGA</div>
+      <div style="width:48px;height:1px;background:var(--pine);opacity:.3;margin:28px 0;"></div>
+      <div style="font-size:14px;color:var(--pine);opacity:.55;line-height:1.7;max-width:320px;">Space to breathe. Space to feel. Space to become who you already are.</div>
     </div>
-  </div>
-  <div class="specimen">
-    <div class="shead"><span class="eyebrow">Typography</span></div>
-    <div class="disp big" style="font-size:84px;color:var(--ink);">MOVE<br>LOUD</div>
-    <div class="id" style="color:var(--mag);">Anton — Display / Condensed</div>
-    <div class="big" style="font-size:21px;font-weight:500;color:var(--ink);opacity:.8;margin-top:24px;">Space Grotesk keeps the running copy clean and grounded under all that shouting. No italics anywhere.</div>
-    <div class="id" style="color:var(--mag);">Space Grotesk — Body / 400–600</div>
-  </div>
-</div>
-
-<!-- BRAND MARK -->
-<div class="section markrow" style="padding-top:0;">
-  <div>
-    <svg viewBox="0 0 220 220" width="220" height="220">
-      <rect width="220" height="220" rx="18" fill="#141414"/>
-      <g transform="translate(110,96)">
-        <g fill="#ff2e63"><rect x="-11" y="-46" width="22" height="92" rx="11"/><rect x="-11" y="-46" width="22" height="92" rx="11" transform="rotate(60)"/><rect x="-11" y="-46" width="22" height="92" rx="11" transform="rotate(120)"/></g>
-        <circle r="16" fill="#ffd000"/>
-      </g>
-      <text x="110" y="184" text-anchor="middle" font-family="Anton" font-size="26" fill="#fff" letter-spacing="1">MOLLIE</text>
-    </svg>
-  </div>
-  <div class="desc">
-    <h4>Brand Mark — original</h4>
-    <h3 class="disp" style="font-size:40px;color:var(--ink);margin-bottom:14px;">THE BLOOM BURST</h3>
-    <p>A six-petal burst — half flower, half asterisk — punched into a black tile. Petals take any accent colour; the yellow centre is fixed. It works as a full lock-up or a tiny stamp at the end of a caption.</p>
-  </div>
-</div>
-
-<!-- ACCENT SYSTEM -->
-<div class="section" style="padding-top:0;">
-  <div class="shead"><span class="eyebrow">Accent System — chakra &amp; element</span><span class="note">the accent takes the whole block</span></div>
-  <p class="lead">In Bloom the themed colour goes full-bleed — a complete colour-block takeover — while the type lock-up stays identical, so it's unmistakably the same brand at a glance.</p>
-  <div class="g2" style="gap:40px;">
-    <div class="accents">
-      <div class="acc"><span class="dot" style="background:#c0392b;"></span><b>Root</b><span>Muladhara</span></div>
-      <div class="acc"><span class="dot" style="background:#e8722b;"></span><b>Sacral</b><span>Svadhisthana</span></div>
-      <div class="acc"><span class="dot" style="background:#f0c419;"></span><b>Solar</b><span>Manipura</span></div>
-      <div class="acc"><span class="dot" style="background:#4fb477;"></span><b>Heart</b><span>Anahata</span></div>
-      <div class="acc"><span class="dot" style="background:#3fa7d6;"></span><b>Throat</b><span>Vishuddha</span></div>
-      <div class="acc"><span class="dot" style="background:#3b5ba5;"></span><b>Third Eye</b><span>Ajna</span></div>
-      <div class="acc"><span class="dot" style="background:#8e6fc4;"></span><b>Crown</b><span>Sahasrara</span></div>
-      <div class="acc"><span class="dot" style="background:#e8552b;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px #e8552b;"></span><b>Fire</b><span>backbends</span></div>
-      <div class="acc"><span class="dot" style="background:#6fa368;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px #6fa368;"></span><b>Earth</b><span>standing</span></div>
-      <div class="acc"><span class="dot" style="background:#8fbedb;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px #8fbedb;"></span><b>Air</b><span>pranayama</span></div>
-      <div class="acc"><span class="dot" style="background:#4a82c2;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px #4a82c2;"></span><b>Water</b><span>hip openers</span></div>
-    </div>
-    <div class="g5" style="grid-template-columns:1fr 1fr;gap:var(--gap);">
-      <div class="card">
-        <div class="plate r45" style="--ac:#3fa7d6;">
-          <div class="wash" style="background:#3fa7d6;"></div>
-          <div class="copy" style="justify-content:space-between;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;">Throat · Vishuddha</span>
-            <div class="disp" style="font-size:40px;color:#fff;line-height:.82;">FIND<br>YOUR<br>VOICE</div>
-            <div style="font-size:13px;font-weight:600;color:#fff;">Chant &amp; sound · Thu 7pm</div>
-          </div>
-        </div>
-        <div class="cap"><b>Throat chakra accent</b><span>full block · 4:5</span></div>
-      </div>
-      <div class="card">
-        <div class="plate r45" style="--ac:#4a82c2;">
-          <div class="wash" style="background:#4a82c2;"></div>
-          <div class="copy" style="justify-content:space-between;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;">Water · element</span>
-            <div class="disp" style="font-size:40px;color:#fff;line-height:.82;">HIP<br>OPEN<br>FLOW</div>
-            <div style="font-size:13px;font-weight:600;color:#fff;">Deep release · Sun 9am</div>
-          </div>
-        </div>
-        <div class="cap"><b>Water element accent</b><span>hip openers · 4:5</span></div>
-      </div>
+    <div style="text-align:right;">
+      <div class="big" style="font-size:22px;color:var(--pine);opacity:.6;">FIELD</div>
+      <div style="font-size:12px;color:var(--pine);opacity:.4;margin-top:8px;">Spacious · Editorial</div>
     </div>
   </div>
 </div>
 
 <!-- GRID POSTS -->
-<div class="section" style="padding-top:0;">
-  <div class="shead"><span class="eyebrow">Instagram — Grid Posts</span><span class="note">5 templates · 4:5</span></div>
+<div class="section">
+  <div class="shead"><div class="ey">02 · Field</div><h3>Grid Posts · 4:5</h3></div>
   <div class="g5">
-    <!-- 1 -->
-    <div class="card">
-      <div class="plate r45" style="--ac:#ff2e63;">
-        <div class="wash" style="background:#ff2e63;"></div>
-        <div class="art"><svg width="100%" height="100%" viewBox="0 0 200 250" preserveAspectRatio="none"><path d="M14 196 q 40 -22 80 0 t 90 0" fill="none" stroke="#ffd000" stroke-width="7" stroke-linecap="round"/></svg></div>
-        <div class="copy" style="justify-content:space-between;">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;">New class ✸</span>
-          <div class="disp" style="font-size:46px;color:#fff;line-height:.78;">POWER<br>FLOW</div>
-          <div style="font-size:13px;font-weight:600;color:#fff;">Starts Mon · 7pm</div>
-        </div>
-      </div>
-      <div class="cap"><b>New class announcement</b><span>4:5</span></div>
-    </div>
-    <!-- 2 -->
-    <div class="card">
-      <div class="plate r45" style="--ac:#fff;">
-        <div class="wash" style="background:#fff;box-shadow:inset 0 0 0 3px #141414;"></div>
-        <div class="copy">
-          <div class="disp" style="font-size:30px;color:#141414;line-height:.8;">THE<br>WEEK</div>
-          <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
-            <div style="background:#ffd000;color:#141414;font-size:13px;font-weight:700;padding:6px 10px;">MON · VINYASA 7PM</div>
-            <div style="background:#ff7a1a;color:#fff;font-size:13px;font-weight:700;padding:6px 10px;">WED · YIN 6PM</div>
-            <div style="background:#ff2e63;color:#fff;font-size:13px;font-weight:700;padding:6px 10px;">FRI · POWER 9AM</div>
-            <div style="background:#141414;color:#fff;font-size:13px;font-weight:700;padding:6px 10px;">SUN · RESTORE 10AM</div>
-          </div>
-        </div>
-      </div>
-      <div class="cap"><b>Weekly schedule</b><span>4:5</span></div>
-    </div>
-    <!-- 3 quote -->
-    <div class="card">
-      <div class="plate r45" style="--ac:#141414;">
-        <div class="wash" style="background:#141414;"></div>
-        <div class="art"><svg width="100%" height="100%" viewBox="0 0 200 250" preserveAspectRatio="none"><path d="M30 150 q 70 -20 140 0" fill="none" stroke="#ff2e63" stroke-width="6" stroke-linecap="round"/></svg></div>
-        <div class="copy center">
-          <div class="disp" style="font-size:30px;color:#fff;line-height:.86;">THINK<br>THE<br><span style="color:#ffd000;">OPPOSITE</span></div>
-          <div style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:16px;">Yoga Sutras 2.33</div>
-        </div>
-      </div>
-      <div class="cap"><b>Quote / mantra</b><span>4:5</span></div>
-    </div>
-    <!-- 4 poster -->
-    <div class="card">
-      <div class="plate r45" style="--ac:#141414;">
-        <img class="plate-img" src="https://i.pinimg.com/1200x/1e/69/b1/1e69b1ccda8ab21f76abdf22c590e72e.jpg" alt="">
-        <div class="wash" style="background:linear-gradient(180deg,rgba(255,46,99,.55),rgba(20,20,20,.7));"></div>
-        <div class="copy" style="justify-content:space-between;">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#ffd000;align-self:flex-start;background:#141414;padding:5px 10px;">Workshop</span>
-          <div class="disp" style="font-size:38px;color:#fff;line-height:.8;">BACK<br>BEND<br>LAB</div>
-          <div style="font-size:13px;font-weight:700;color:#fff;">SAT 22 JUN · £28</div>
-        </div>
-      </div>
-      <div class="cap"><b>Poster / advert</b><span>workshop · 4:5</span></div>
-    </div>
-    <!-- 5 recent -->
-    <div class="card">
-      <div class="plate r45" style="--ac:#141414;">
-        <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1.25fr 1fr;gap:4px;">
-          <img class="plate-img" style="position:relative;grid-column:span 2;" src="https://i.pinimg.com/1200x/1e/69/b1/1e69b1ccda8ab21f76abdf22c590e72e.jpg" alt="">
-          <div style="background:#ff2e63;display:flex;align-items:center;justify-content:center;"><span class="disp" style="font-size:16px;color:#fff;text-align:center;line-height:.82;">THIS<br>MONTH</span></div>
-          <img class="plate-img" style="position:relative;" src="https://i.pinimg.com/1200x/24/f8/f0/24f8f0df5d2242110b4e6c1231dfae39.jpg" alt="">
-        </div>
-      </div>
-      <div class="cap"><b>Recent classes / life</b><span>photo + tile · 4:5</span></div>
-    </div>
-  </div>
-</div>
 
-<!-- MANTRA BAND -->
-<div class="mantra" style="background:var(--mag);color:#fff;">
-  <div class="q disp" style="font-size:clamp(36px,7vw,104px);color:#fff;">LIVE YOUR OWN<br>DESTINY <span style="color:#ffd000;">IMPERFECTLY.</span></div>
-  <div class="src" style="color:rgba(255,255,255,.85);">Bhagavad Gita</div>
+    <!-- 1. NEW CLASS -->
+    <div class="card">
+      <div class="plate r45" style="background:var(--paper);">
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 300 375">
+            <line x1="30" y1="220" x2="270" y2="220" stroke="#41674F" stroke-width=".7" opacity=".2"/>
+            <circle cx="150" cy="100" r="60" fill="none" stroke="#86A9C7" stroke-width=".7" opacity=".25"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span class="ey" style="font-size:9px;color:var(--pine);opacity:.5;">New</span>
+            <span class="ey" style="font-size:9px;color:var(--pine);opacity:.4;">@mollieyoga</span>
+          </div>
+          <div>
+            <div style="width:20px;height:1px;background:var(--pine);opacity:.4;margin-bottom:16px;"></div>
+            <div class="big" style="font-size:36px;color:var(--pine);">DEEP<br>YIN</div>
+            <div style="font-size:11px;color:var(--pine);opacity:.55;margin-top:14px;line-height:1.6;">Wednesdays · 7PM<br>Bondi Junction Studio</div>
+          </div>
+          <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--pine);opacity:.3;">Mollie Yoga</div>
+        </div>
+      </div>
+      <div class="cap"><b>New Class</b><span>4:5</span></div>
+    </div>
+
+    <!-- 2. SCHEDULE -->
+    <div class="card">
+      <div class="plate r45" style="background:var(--paper);">
+        <div class="wash" style="background:radial-gradient(ellipse at 30% 40%, rgba(134,169,199,.3) 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(147,176,140,.25) 0%, transparent 50%);"></div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="big" style="font-size:11px;color:var(--pine);letter-spacing:.18em;opacity:.6;">SCHEDULE</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;">
+              <span style="font-size:11px;color:var(--pine);opacity:.5;letter-spacing:.05em;text-transform:uppercase;">Monday</span>
+              <span style="font-size:12px;color:var(--pine);">Yin · 7AM</span>
+            </div>
+            <div style="height:.5px;background:var(--pine);opacity:.1;"></div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;">
+              <span style="font-size:11px;color:var(--pine);opacity:.5;letter-spacing:.05em;text-transform:uppercase;">Tuesday</span>
+              <span style="font-size:12px;color:var(--pine);">Power · 6PM</span>
+            </div>
+            <div style="height:.5px;background:var(--pine);opacity:.1;"></div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;">
+              <span style="font-size:11px;color:var(--pine);opacity:.5;letter-spacing:.05em;text-transform:uppercase;">Wednesday</span>
+              <span style="font-size:12px;color:var(--pine);">Deep Yin · 7PM</span>
+            </div>
+            <div style="height:.5px;background:var(--pine);opacity:.1;"></div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;">
+              <span style="font-size:11px;color:var(--pine);opacity:.5;letter-spacing:.05em;text-transform:uppercase;">Saturday</span>
+              <span style="font-size:12px;color:var(--pine);">Flow · 8AM</span>
+            </div>
+          </div>
+          <div style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--pine);opacity:.3;">Mollie Yoga</div>
+        </div>
+      </div>
+      <div class="cap"><b>Schedule</b><span>4:5</span></div>
+    </div>
+
+    <!-- 3. MANTRA -->
+    <div class="card">
+      <div class="plate r45" style="background:var(--paper);">
+        <div class="wash" style="background:radial-gradient(ellipse at 50% 30%, rgba(158,140,196,.25) 0%, transparent 65%), radial-gradient(ellipse at 20% 80%, rgba(134,169,199,.2) 0%, transparent 55%);"></div>
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 300 375">
+            <path d="M 60 200 Q 150 160 240 200" fill="none" stroke="#9E8CC4" stroke-width=".8" opacity=".3"/>
+            <path d="M 60 210 Q 150 250 240 210" fill="none" stroke="#9E8CC4" stroke-width=".8" opacity=".2"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.4;">Yoga Sutras 1.33</div>
+          <div style="font-size:13px;color:var(--pine);line-height:1.65;font-weight:400;">By cultivating friendliness toward the happy, compassion for the unhappy, delight in the virtuous — the mind retains undisturbed calmness.</div>
+          <div style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--pine);opacity:.3;">Mollie Yoga</div>
+        </div>
+      </div>
+      <div class="cap"><b>Mantra · Sutras 1.33</b><span>4:5</span></div>
+    </div>
+
+    <!-- 4. RETREAT POSTER -->
+    <div class="card">
+      <div class="plate r45">
+        <img class="plate-img" src="https://i.pinimg.com/1200x/24/f8/f0/24f8f0df5d2242110b4e6c1231dfae39.jpg" alt="">
+        <div class="wash" style="background:linear-gradient(to top, rgba(239,234,224,.95) 40%, rgba(134,169,199,.4) 100%);"></div>
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 300 375">
+            <circle cx="150" cy="150" r="100" fill="none" stroke="#41674F" stroke-width=".7" opacity=".2"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.5;">Workshop</div>
+          <div>
+            <div class="big" style="font-size:32px;color:var(--pine);">ARISE<br>&amp; OPEN</div>
+            <div style="width:16px;height:.8px;background:var(--pine);opacity:.4;margin:14px 0;"></div>
+            <div style="font-size:11px;color:var(--pine);opacity:.6;line-height:1.5;">Full-day immersion<br>Saturday 8 Feb</div>
+          </div>
+          <div style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--pine);opacity:.3;">Mollie Yoga</div>
+        </div>
+      </div>
+      <div class="cap"><b>Retreat Poster</b><span>4:5</span></div>
+    </div>
+
+    <!-- 5. LIFE / RECENT -->
+    <div class="card">
+      <div class="plate r45">
+        <img class="plate-img" src="https://i.pinimg.com/1200x/bc/c6/dd/bcc6ddbc63759184ac4b3f5cbd43ea82.jpg" alt="">
+        <div class="wash" style="background:linear-gradient(to top, rgba(134,169,199,.75) 0%, rgba(134,169,199,.2) 60%, transparent 100%);"></div>
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 300 375">
+            <path d="M 40 300 Q 80 280 120 300 Q 160 320 200 300 Q 240 280 270 300" fill="none" stroke="#EFEAE0" stroke-width=".8" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:flex-end;">
+          <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);opacity:.8;">Recent · Life</div>
+        </div>
+      </div>
+      <div class="cap"><b>Life / Recent</b><span>4:5</span></div>
+    </div>
+
+  </div>
 </div>
 
 <!-- STORIES -->
 <div class="section">
-  <div class="shead"><span class="eyebrow">Instagram — Stories &amp; Reels</span><span class="note">5 templates · 9:16</span></div>
+  <div class="shead"><div class="ey">02 · Field</div><h3>Stories · 9:16</h3></div>
   <div class="g5">
-    <!-- 1 -->
+
+    <!-- S1 SCHEDULE COVER -->
     <div class="card">
-      <div class="plate r916" style="--ac:#fff;">
-        <div class="wash" style="background:#fff;box-shadow:inset 0 0 0 3px #141414;"></div>
-        <div class="copy">
-          <div class="disp" style="font-size:30px;color:#141414;line-height:.8;">HEADS<br>UP!</div>
-          <div style="margin-top:16px;display:flex;flex-direction:column;gap:9px;">
-            <div style="background:#eee;color:#141414;font-size:13px;font-weight:700;padding:7px 10px;text-decoration:line-through;opacity:.65;">WED 6PM — YIN</div>
-            <div style="background:#ff2e63;color:#fff;font-size:13px;font-weight:700;padding:7px 10px;">MOLLIE COVERS<br>THU 6PM ↗</div>
+      <div class="plate r916" style="background:var(--paper);">
+        <div class="wash" style="background:radial-gradient(ellipse at 20% 50%, rgba(134,169,199,.35) 0%, transparent 55%), radial-gradient(ellipse at 80% 20%, rgba(158,140,196,.25) 0%, transparent 50%);"></div>
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 200 355">
+            <circle cx="100" cy="175" r="110" fill="none" stroke="#41674F" stroke-width=".7" opacity=".12"/>
+            <circle cx="100" cy="175" r="75" fill="none" stroke="#41674F" stroke-width=".5" opacity=".1"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.5;">This Week</div>
+          <div>
+            <div class="big" style="font-size:52px;color:var(--pine);">ON<br>THE<br>MAT</div>
           </div>
-          <div style="margin-top:auto;font-size:13px;font-weight:600;color:#141414;">rest of week as normal</div>
+          <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--pine);opacity:.3;">@mollieyoga</div>
         </div>
       </div>
-      <div class="cap"><b>Weekly schedule</b><span>cover · 9:16</span></div>
+      <div class="cap"><b>Schedule Cover</b><span>9:16</span></div>
     </div>
-    <!-- 2 -->
+
+    <!-- S2 EVENT -->
     <div class="card">
-      <div class="plate r916" style="--ac:#ff7a1a;">
-        <div class="wash" style="background:#ff7a1a;"></div>
-        <div class="copy center" style="justify-content:space-between;">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#141414;">Retreat 2025</span>
-          <div class="disp" style="font-size:42px;color:#fff;line-height:.78;">BLOOM<br>BY THE<br>SEA</div>
-          <div style="width:100%;background:#141414;color:#ffd000;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:11px 0;border-radius:100px;">Book now ↑</div>
+      <div class="plate r916" style="background:var(--paper);">
+        <div class="wash" style="background:radial-gradient(ellipse at 60% 40%, rgba(147,176,140,.3) 0%, transparent 60%);"></div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.4;">Upcoming</div>
+          <div>
+            <div style="width:24px;height:.8px;background:var(--sage);margin-bottom:20px;opacity:.8;"></div>
+            <div class="big" style="font-size:38px;color:var(--pine);">WINTER<br>FLOW<br>SERIES</div>
+            <div style="font-size:12px;color:var(--pine);opacity:.6;margin-top:18px;line-height:1.7;">6 weeks · Starting July 7<br>Monday evenings · 7PM<br>Spaces limited</div>
+            <div style="margin-top:20px;padding:12px 0;border-top:1px solid rgba(65,103,79,.15);border-bottom:1px solid rgba(65,103,79,.15);">
+              <div style="font-size:11px;color:var(--pine);letter-spacing:.06em;">Link in bio to register</div>
+            </div>
+          </div>
+          <div style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--pine);opacity:.3;">Mollie Yoga</div>
         </div>
       </div>
-      <div class="cap"><b>Invite to book</b><span>retreat · 9:16</span></div>
+      <div class="cap"><b>Event Booking</b><span>9:16</span></div>
     </div>
-    <!-- 3 -->
+
+    <!-- S3 DAILY REFLECTION -->
     <div class="card">
-      <div class="plate r916" style="--ac:#141414;">
-        <img class="plate-img" src="https://i.pinimg.com/1200x/15/fc/7a/15fc7af4abf8cf89ac8cb267926c6f5f.jpg" alt="">
-        <div class="wash" style="background:linear-gradient(180deg,rgba(20,20,20,.1),rgba(20,20,20,.7));"></div>
-        <div class="art"><svg width="100%" height="100%" viewBox="0 0 120 213" preserveAspectRatio="none"><path d="M16 150 q 44 -18 88 0" fill="none" stroke="#ffd000" stroke-width="5" stroke-linecap="round"/></svg></div>
-        <div class="copy" style="justify-content:flex-end;">
-          <div style="font-size:18px;font-weight:600;color:#fff;line-height:1.35;">slow Sunday.<br>tea, then the mat.</div>
-          <div style="margin-top:10px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#ffd000;">Mollie Yoga</div>
+      <div class="plate r916" style="background:var(--paper);">
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 200 355">
+            <path d="M 40 180 Q 100 140 160 180" fill="none" stroke="#86A9C7" stroke-width=".8" opacity=".35"/>
+            <path d="M 40 195 Q 100 235 160 195" fill="none" stroke="#86A9C7" stroke-width=".8" opacity=".25"/>
+            <circle cx="100" cy="186" r="3" fill="#86A9C7" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.4;">Morning</div>
+          <div style="text-align:center;">
+            <div style="font-size:13px;color:var(--pine);line-height:1.7;font-weight:300;">You are what you believe in. You become that which you believe you can become.</div>
+            <div style="width:16px;height:.8px;background:var(--pine);opacity:.25;margin:18px auto;"></div>
+            <div style="font-size:10px;color:var(--pine);opacity:.4;letter-spacing:.08em;text-transform:uppercase;">Bhagavad Gita</div>
+          </div>
+          <div style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--pine);opacity:.3;">Mollie Yoga</div>
         </div>
       </div>
-      <div class="cap"><b>Daily-life reflection</b><span>light · 9:16</span></div>
+      <div class="cap"><b>Daily Reflection</b><span>9:16</span></div>
     </div>
-    <!-- 4 -->
+
+    <!-- S4 TESTIMONIAL -->
     <div class="card">
-      <div class="plate r916" style="--ac:#ffd000;">
-        <div class="wash" style="background:#ffd000;"></div>
-        <div class="copy center">
-          <div class="disp" style="font-size:26px;color:#141414;line-height:.84;">BEST<br>HOUR OF<br>MY WEEK</div>
-          <div style="margin-top:14px;font-size:13px;font-weight:600;color:#141414;">— Priya, Friday Power Flow</div>
+      <div class="plate r916">
+        <img class="plate-img" src="https://i.pinimg.com/1200x/95/82/2d/95822d1c056f0d3ddce0336c3038ef92.jpg" alt="">
+        <div class="wash" style="background:linear-gradient(to bottom, rgba(239,234,224,.9) 0%, rgba(239,234,224,.7) 100%);"></div>
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 200 355">
+            <path d="M 30 50 Q 100 30 170 50" fill="none" stroke="#41674F" stroke-width=".7" opacity=".2"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.4;">Kind words</div>
+          <div>
+            <div style="font-size:15px;color:var(--pine);line-height:1.65;font-weight:300;">"Mollie creates an environment where you feel completely held. I leave every class lighter."</div>
+            <div style="font-size:10px;color:var(--pine);opacity:.5;margin-top:14px;">— James T.</div>
+          </div>
+          <div style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--pine);opacity:.3;">Mollie Yoga</div>
         </div>
       </div>
-      <div class="cap"><b>Testimonial</b><span>feedback · 9:16</span></div>
+      <div class="cap"><b>Testimonial</b><span>9:16</span></div>
     </div>
-    <!-- 5 -->
+
+    <!-- S5 REEL COVER -->
     <div class="card">
-      <div class="plate r916" style="--ac:#141414;">
-        <div class="wash" style="background:#141414;"></div>
-        <div class="copy center" style="justify-content:center;">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#ff2e63;margin-bottom:14px;">▶ Reel</span>
-          <div class="disp" style="font-size:34px;color:#fff;line-height:.8;">5 POSES<br>TO WAKE<br>UP</div>
-          <div style="margin-top:14px;font-size:13px;font-weight:600;color:#ffd000;">try it with me →</div>
+      <div class="plate r916" style="background:var(--paper);">
+        <div class="wash" style="background:radial-gradient(ellipse at 50% 40%, rgba(158,140,196,.35) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(134,169,199,.3) 0%, transparent 50%);"></div>
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 200 355">
+            <ellipse cx="100" cy="160" rx="80" ry="100" fill="none" stroke="#41674F" stroke-width=".8" opacity=".15"/>
+            <ellipse cx="100" cy="160" rx="50" ry="65" fill="none" stroke="#41674F" stroke-width=".6" opacity=".12"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.4;">Reel</div>
+          <div>
+            <div class="big" style="font-size:44px;color:var(--pine);">PRAC-<br>TICE<br>LOG</div>
+          </div>
+          <div style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--pine);opacity:.3;">@mollieyoga</div>
         </div>
       </div>
-      <div class="cap"><b>Reel cover</b><span>9:16</span></div>
+      <div class="cap"><b>Reel Cover</b><span>9:16</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MANTRA BAND -->
+<div class="section">
+  <div class="shead"><div class="ey">02 · Field</div><h3>Mantra Treatments</h3></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);">
+    <div style="background:var(--paper);border-radius:4px;padding:48px 52px;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%, rgba(134,169,199,.3) 0%, transparent 55%);"></div>
+      <div style="position:relative;">
+        <div class="ey" style="font-size:9px;color:var(--pine);opacity:.4;margin-bottom:20px;">Yoga Sutras 1.33</div>
+        <div style="font-size:17px;color:var(--pine);line-height:1.65;font-weight:300;max-width:400px;">By cultivating friendliness toward the happy, compassion for the unhappy, delight in the virtuous, disregard toward the wicked — the mind retains undisturbed calmness.</div>
+        <div style="width:24px;height:.8px;background:var(--sage);margin-top:24px;opacity:.8;"></div>
+      </div>
+    </div>
+    <div style="background:var(--paper);border-radius:4px;padding:48px 52px;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 20% 70%, rgba(158,140,196,.25) 0%, transparent 55%);"></div>
+      <div style="position:relative;">
+        <div class="ey" style="font-size:9px;color:var(--pine);opacity:.4;margin-bottom:20px;">Bhagavad Gita</div>
+        <div style="font-size:17px;color:var(--pine);line-height:1.65;font-weight:300;max-width:400px;">You are what you believe in. You become that which you believe you can become.</div>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- CHAKRA DEMO -->
+<div class="section">
+  <div class="shead"><div class="ey">02 · Field</div><h3>Chakra Accent · Heart</h3></div>
+  <div style="background:var(--paper);border-radius:4px;padding:36px 44px;display:flex;align-items:center;gap:36px;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%, rgba(79,180,119,.2) 0%, transparent 55%);"></div>
+    <div style="width:56px;height:56px;border-radius:50%;background:#4fb477;flex-shrink:0;position:relative;"></div>
+    <div style="position:relative;">
+      <div style="font-size:22px;font-family:'Archivo',sans-serif;font-weight:700;text-transform:uppercase;color:var(--pine);">Anahata · Heart</div>
+      <div style="font-size:13px;color:var(--pine);opacity:.6;margin-top:8px;line-height:1.5;">Love. Compassion. Connection. Heart chakra colour for Yin, restorative, and self-love themed posts.</div>
+    </div>
+    <div style="margin-left:auto;display:flex;gap:10px;position:relative;">
+      <div style="width:28px;height:28px;border-radius:50%;background:#c0392b;opacity:.5;"></div>
+      <div style="width:28px;height:28px;border-radius:50%;background:#e8722b;opacity:.5;"></div>
+      <div style="width:28px;height:28px;border-radius:50%;background:#f0c419;opacity:.5;"></div>
+      <div style="width:28px;height:28px;border-radius:50%;background:#4fb477;"></div>
+      <div style="width:28px;height:28px;border-radius:50%;background:#3fa7d6;opacity:.5;"></div>
+      <div style="width:28px;height:28px;border-radius:50%;background:#3b5ba5;opacity:.5;"></div>
+      <div style="width:28px;height:28px;border-radius:50%;background:#8e6fc4;opacity:.5;"></div>
+    </div>
+  </div>
+</div>
+
 </section>
 
-<!-- ════════════════════════════════════════════════════════════════
-     03 · TALISMAN
-════════════════════════════════════════════════════════════════ -->
-<section id="c3">
-
-<div class="chead">
-  <div class="cnum" style="font-family:'Syne',sans-serif;font-weight:800;">03</div>
-  <div class="cname">Talisman</div>
-  <div class="cdesc">Swiss-graphic and symbol-led. Flat cobalt and orange, geometric marks and confident grids. Designed, not decorated.</div>
-</div>
+<!-- ═══════════════════════════════════════════════════
+     CONCEPT 03 · TALISMAN — Symbol-Led / Crafted
+═══════════════════════════════════════════════════ -->
+<section id="c3" class="concept">
 
 <!-- HERO -->
-<div class="c3-hero">
-  <img class="plate-img" src="https://i.pinimg.com/1200x/65/cf/8c/65cf8c2707696c0f65d2a09f12a30272.jpg" alt="">
-  <div class="wash"></div>
-  <div class="art">
-    <svg width="100%" height="100%" viewBox="0 0 1200 640" preserveAspectRatio="none">
-      <circle cx="1000" cy="180" r="90" fill="none" stroke="#ff6a00" stroke-width="8"/>
-      <circle cx="1000" cy="180" r="46" fill="#ff6a00"/>
-      <line x1="120" y1="500" x2="520" y2="500" stroke="#ff6a00" stroke-width="6"/>
-      <circle cx="120" cy="500" r="10" fill="#fff"/>
+<div style="position:relative;overflow:hidden;border-radius:6px;height:460px;margin-bottom:var(--rhythm);background:var(--paper);">
+  <!-- Drawn marks / squiggles bg -->
+  <div style="position:absolute;inset:0;">
+    <svg width="100%" height="100%" viewBox="0 0 1440 460" preserveAspectRatio="xMidYMid slice">
+      <!-- large arc sweep -->
+      <path d="M -100 600 Q 400 -80 1000 300 Q 1300 500 1600 200" fill="none" stroke="#41674F" stroke-width="1.2" opacity=".12"/>
+      <!-- squiggle -->
+      <path d="M 100 380 Q 160 340 220 370 Q 280 400 340 360 Q 400 320 460 360 Q 520 400 580 350" fill="none" stroke="#93B08C" stroke-width="1" stroke-linecap="round" opacity=".3"/>
+      <!-- orbit rings right side -->
+      <circle cx="1100" cy="230" r="180" fill="none" stroke="#41674F" stroke-width="1" opacity=".1"/>
+      <circle cx="1100" cy="230" r="120" fill="none" stroke="#41674F" stroke-width=".8" opacity=".08"/>
+      <circle cx="1100" cy="230" r="60" fill="none" stroke="#41674F" stroke-width=".7" opacity=".12"/>
+      <circle cx="1100" cy="230" r="6" fill="#41674F" opacity=".2"/>
+      <!-- small scattered dots -->
+      <circle cx="300" cy="80" r="2" fill="#9E8CC4" opacity=".3"/>
+      <circle cx="800" cy="380" r="2" fill="#86A9C7" opacity=".3"/>
+      <circle cx="600" cy="120" r="1.5" fill="#E3A23E" opacity=".4"/>
     </svg>
   </div>
-  <div class="copy">
-    <span class="kick">Direction 03 · Mollie Yoga</span>
-    <h1>TALIS<span class="o">MAN</span></h1>
-    <div class="tagline">A practice with its own symbols. Bristol &amp; online.</div>
-  </div>
-</div>
-
-<!-- PALETTE + TYPE -->
-<div class="section g2">
-  <div>
-    <div class="shead"><span class="eyebrow">Colour — 5 only</span></div>
-    <div class="swatches">
-      <div class="sw" style="background:#2b3cf5;"><span class="nm" style="color:#fff;">Cobalt</span><span class="hx" style="color:#fff;">#2B3CF5</span></div>
-      <div class="sw" style="background:#0d0e16;"><span class="nm" style="color:#fff;">Ink</span><span class="hx" style="color:#fff;">#0D0E16</span></div>
-      <div class="sw" style="background:#ff6a00;"><span class="nm" style="color:#fff;">Orange</span><span class="hx" style="color:#fff;">#FF6A00</span></div>
-      <div class="sw" style="background:#daddff;"><span class="nm">Mist</span><span class="hx">#DADDFF</span></div>
-      <div class="sw" style="background:#ffffff;border:1px solid rgba(0,0,0,.12);"><span class="nm">White</span><span class="hx">#FFFFFF</span></div>
-    </div>
-  </div>
-  <div class="specimen">
-    <div class="shead"><span class="eyebrow">Typography</span></div>
-    <div class="disp big" style="font-size:72px;color:var(--ink);">GROUND<br>RISE</div>
-    <div class="id" style="color:var(--cobalt);">Syne — Display / 800</div>
-    <div class="big" style="font-size:21px;font-weight:500;color:var(--ink);opacity:.8;margin-top:24px;">Space Grotesk runs the system text — labels, schedules, captions — with total clarity. Upright throughout.</div>
-    <div class="id" style="color:var(--cobalt);">Space Grotesk — Body / 400–600</div>
-  </div>
-</div>
-
-<!-- BRAND MARK -->
-<div class="section markrow" style="padding-top:0;">
-  <div>
-    <svg viewBox="0 0 220 220" width="220" height="220">
-      <rect width="220" height="220" rx="18" fill="#2b3cf5"/>
-      <circle cx="110" cy="100" r="58" fill="none" stroke="#fff" stroke-width="6"/>
-      <circle cx="110" cy="100" r="26" fill="#ff6a00"/>
-      <line x1="110" y1="20" x2="110" y2="42" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
-      <line x1="110" y1="158" x2="110" y2="180" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
-      <line x1="30" y1="100" x2="52" y2="100" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
-      <line x1="168" y1="100" x2="190" y2="100" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
-      <text x="110" y="205" text-anchor="middle" font-family="Syne" font-weight="800" font-size="19" fill="#fff" letter-spacing="3">MOLLIE</text>
+  <!-- Brand mark centred -->
+  <div style="position:absolute;left:64px;top:50%;transform:translateY(-50%);">
+    <svg width="120" height="120" viewBox="0 0 100 100" style="color:var(--pine);">
+      <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+      <path d="M50 18 Q63 34 50 50 Q37 34 50 18Z" fill="currentColor" opacity=".7"/>
+      <path d="M82 50 Q66 63 50 50 Q66 37 82 50Z" fill="currentColor" opacity=".7"/>
+      <path d="M50 82 Q37 66 50 50 Q63 66 50 82Z" fill="currentColor" opacity=".7"/>
+      <path d="M18 50 Q34 37 50 50 Q34 63 18 50Z" fill="currentColor" opacity=".7"/>
+      <circle cx="50" cy="50" r="4.5" fill="currentColor"/>
+      <path d="M 15 25 Q 50 8 85 25" fill="none" stroke="currentColor" stroke-width=".8" opacity=".35"/>
     </svg>
   </div>
-  <div class="desc">
-    <h4>Brand Mark — original</h4>
-    <h3 class="disp" style="font-size:36px;color:var(--ink);margin-bottom:14px;">The talisman seal</h3>
-    <p>A geometric sun — ringed circle, solid core, four cardinal rays — reduced to pure flat shapes. No line-art fuss; just confident geometry that stamps, embroiders and scales to a favicon. The core is what re-colours for themed classes.</p>
-  </div>
-</div>
-
-<!-- ACCENT SYSTEM -->
-<div class="section" style="padding-top:0;">
-  <div class="shead"><span class="eyebrow">Accent System — chakra &amp; element</span><span class="note">the seal core &amp; rule re-colour</span></div>
-  <p class="lead">A themed class re-inks the seal's core and the section rule in the chakra or element colour. The geometry never changes — only the hue tells you what today holds.</p>
-  <div class="g2" style="gap:40px;">
-    <div class="accents">
-      <div class="acc"><span class="dot" style="background:#c0392b;"></span><b>Root</b><span>Muladhara</span></div>
-      <div class="acc"><span class="dot" style="background:#e8722b;"></span><b>Sacral</b><span>Svadhisthana</span></div>
-      <div class="acc"><span class="dot" style="background:#f0c419;"></span><b>Solar</b><span>Manipura</span></div>
-      <div class="acc"><span class="dot" style="background:#4fb477;"></span><b>Heart</b><span>Anahata</span></div>
-      <div class="acc"><span class="dot" style="background:#3fa7d6;"></span><b>Throat</b><span>Vishuddha</span></div>
-      <div class="acc"><span class="dot" style="background:#3b5ba5;"></span><b>Third Eye</b><span>Ajna</span></div>
-      <div class="acc"><span class="dot" style="background:#8e6fc4;"></span><b>Crown</b><span>Sahasrara</span></div>
-      <div class="acc"><span class="dot" style="background:#e8552b;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px #e8552b;"></span><b>Fire</b><span>backbends</span></div>
-      <div class="acc"><span class="dot" style="background:#6fa368;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px #6fa368;"></span><b>Earth</b><span>standing</span></div>
-      <div class="acc"><span class="dot" style="background:#8fbedb;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px #8fbedb;"></span><b>Air</b><span>pranayama</span></div>
-      <div class="acc"><span class="dot" style="background:#4a82c2;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px #4a82c2;"></span><b>Water</b><span>hip openers</span></div>
-    </div>
-    <div class="g5" style="grid-template-columns:1fr 1fr;gap:var(--gap);">
-      <div class="card">
-        <div class="plate r45" style="--ac:#0d0e16;">
-          <div class="wash" style="background:#0d0e16;"></div>
-          <div class="copy center" style="justify-content:space-between;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8e6fc4;align-self:center;">Crown · Sahasrara</span>
-            <svg viewBox="0 0 120 120" width="84" height="84"><circle cx="60" cy="60" r="34" fill="none" stroke="#fff" stroke-width="5"/><circle cx="60" cy="60" r="15" fill="#8e6fc4"/><g stroke="#fff" stroke-width="5" stroke-linecap="round"><line x1="60" y1="14" x2="60" y2="26"/><line x1="60" y1="94" x2="60" y2="106"/><line x1="14" y1="60" x2="26" y2="60"/><line x1="94" y1="60" x2="106" y2="60"/></g></svg>
-            <div class="disp" style="font-size:20px;color:#fff;">CROWN<br>MEDITATION</div>
-          </div>
-        </div>
-        <div class="cap"><b>Crown chakra accent</b><span>seal re-inked · 4:5</span></div>
-      </div>
-      <div class="card">
-        <div class="plate r45" style="--ac:#2b3cf5;">
-          <div class="wash" style="background:#2b3cf5;"></div>
-          <div class="copy center" style="justify-content:space-between;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;align-self:center;">Earth · element</span>
-            <svg viewBox="0 0 120 120" width="84" height="84"><circle cx="60" cy="60" r="34" fill="none" stroke="#fff" stroke-width="5"/><circle cx="60" cy="60" r="15" fill="#6fa368"/><g stroke="#fff" stroke-width="5" stroke-linecap="round"><line x1="60" y1="14" x2="60" y2="26"/><line x1="60" y1="94" x2="60" y2="106"/><line x1="14" y1="60" x2="26" y2="60"/><line x1="94" y1="60" x2="106" y2="60"/></g></svg>
-            <div class="disp" style="font-size:20px;color:#fff;">GROUNDING<br>STANDING</div>
-          </div>
-        </div>
-        <div class="cap"><b>Earth element accent</b><span>standing · 4:5</span></div>
-      </div>
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding-right:64px;">
+    <div style="text-align:right;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pine);opacity:.4;margin-bottom:20px;">Concept 03</div>
+      <div class="big" style="font-size:76px;color:var(--pine);">MOLLIE<br>YOGA</div>
+      <div style="font-size:13px;color:var(--pine);opacity:.5;margin-top:16px;line-height:1.6;max-width:280px;text-align:right;">Mark-driven. Line-drawn. Folk-modern. Every element carries meaning.</div>
+      <div class="big" style="font-size:14px;color:var(--pine);opacity:.4;margin-top:20px;letter-spacing:.12em;">TALISMAN</div>
     </div>
   </div>
 </div>
 
 <!-- GRID POSTS -->
-<div class="section" style="padding-top:0;">
-  <div class="shead"><span class="eyebrow">Instagram — Grid Posts</span><span class="note">5 templates · 4:5</span></div>
+<div class="section">
+  <div class="shead"><div class="ey">03 · Talisman</div><h3>Grid Posts · 4:5</h3></div>
   <div class="g5">
-    <!-- 1 -->
+
+    <!-- 1. NEW CLASS -->
     <div class="card">
-      <div class="plate r45" style="--ac:#2b3cf5;">
-        <div class="wash" style="background:#2b3cf5;"></div>
-        <div class="art"><svg width="100%" height="100%" viewBox="0 0 200 250" preserveAspectRatio="none"><line x1="20" y1="60" x2="120" y2="60" stroke="#ff6a00" stroke-width="5"/></svg></div>
+      <div class="plate r45" style="background:var(--pine);">
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 300 375">
+            <!-- arc sweep -->
+            <path d="M -20 300 Q 150 80 320 280" fill="none" stroke="#EFEAE0" stroke-width="1.2" opacity=".15" stroke-linecap="round"/>
+            <!-- brand mark small -->
+            <g transform="translate(220,40) scale(.55)" opacity=".4">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="#EFEAE0" stroke-width="2"/>
+              <path d="M50 18 Q63 34 50 50 Q37 34 50 18Z" fill="#EFEAE0"/>
+              <path d="M82 50 Q66 63 50 50 Q66 37 82 50Z" fill="#EFEAE0"/>
+              <path d="M50 82 Q37 66 50 50 Q63 66 50 82Z" fill="#EFEAE0"/>
+              <path d="M18 50 Q34 37 50 50 Q34 63 18 50Z" fill="#EFEAE0"/>
+              <circle cx="50" cy="50" r="4.5" fill="#EFEAE0"/>
+            </g>
+          </svg>
+        </div>
         <div class="copy" style="justify-content:space-between;">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#ff6a00;">New class</span>
-          <div class="disp" style="font-size:30px;color:#fff;">MORNING<br>SĀDHANA</div>
-          <div style="font-size:13px;font-weight:600;color:var(--mist);">Starts Tue · 7am</div>
+          <div class="ey" style="font-size:9px;color:var(--sage);">New · Class</div>
+          <div>
+            <div class="big" style="font-size:40px;color:var(--paper);">SOUND<br>BATH<br>FLOW</div>
+            <div style="font-size:11px;color:var(--paper);opacity:.55;margin-top:14px;line-height:1.6;">Fridays · 7:30PM<br>Limited to 15</div>
+          </div>
+          <div class="ey" style="font-size:9px;color:var(--paper);opacity:.3;">Mollie Yoga</div>
         </div>
       </div>
-      <div class="cap"><b>New class announcement</b><span>4:5</span></div>
+      <div class="cap"><b>New Class</b><span>4:5</span></div>
     </div>
-    <!-- 2 -->
+
+    <!-- 2. SCHEDULE -->
     <div class="card">
-      <div class="plate r45" style="--ac:#fff;">
-        <div class="wash" style="background:#fff;box-shadow:inset 0 0 0 3px #2b3cf5;"></div>
-        <div class="copy">
-          <div class="disp" style="font-size:26px;color:#0d0e16;">THE WEEK</div>
-          <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;font-size:14px;font-weight:600;color:#0d0e16;">
-            <div style="display:flex;align-items:center;gap:9px;"><span style="width:11px;height:11px;background:#2b3cf5;"></span>Mon · Vinyasa 7pm</div>
-            <div style="display:flex;align-items:center;gap:9px;"><span style="width:11px;height:11px;background:#ff6a00;"></span>Wed · Yin 6pm</div>
-            <div style="display:flex;align-items:center;gap:9px;"><span style="width:11px;height:11px;background:#2b3cf5;"></span>Fri · Slow 9am</div>
-            <div style="display:flex;align-items:center;gap:9px;"><span style="width:11px;height:11px;background:#ff6a00;"></span>Sun · Restore 10am</div>
+      <div class="plate r45" style="background:var(--paper);">
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 300 375">
+            <path d="M 20 40 Q 60 20 100 40 Q 140 60 180 40 Q 220 20 260 40" fill="none" stroke="#41674F" stroke-width="1" stroke-linecap="round" opacity=".2"/>
+            <!-- brand mark -->
+            <g transform="translate(220,270) scale(.5)" opacity=".25">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="#41674F" stroke-width="2"/>
+              <path d="M50 18 Q63 34 50 50 Q37 34 50 18Z" fill="#41674F"/>
+              <path d="M82 50 Q66 63 50 50 Q66 37 82 50Z" fill="#41674F"/>
+              <path d="M50 82 Q37 66 50 50 Q63 66 50 82Z" fill="#41674F"/>
+              <path d="M18 50 Q34 37 50 50 Q34 63 18 50Z" fill="#41674F"/>
+              <circle cx="50" cy="50" r="4.5" fill="#41674F"/>
+            </g>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.5;">Schedule</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:.7px solid rgba(65,103,79,.18);">
+              <span style="font-size:10px;color:var(--pine);opacity:.5;text-transform:uppercase;letter-spacing:.06em;">Mon</span><span style="font-size:11px;color:var(--pine);">Yin 7AM</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:.7px solid rgba(65,103,79,.18);">
+              <span style="font-size:10px;color:var(--pine);opacity:.5;text-transform:uppercase;letter-spacing:.06em;">Tue</span><span style="font-size:11px;color:var(--pine);">Power 6PM</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:.7px solid rgba(65,103,79,.18);">
+              <span style="font-size:10px;color:var(--pine);opacity:.5;text-transform:uppercase;letter-spacing:.06em;">Wed</span><span style="font-size:11px;color:var(--pine);">Deep Yin 7PM</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:.7px solid rgba(65,103,79,.18);">
+              <span style="font-size:10px;color:var(--pine);opacity:.5;text-transform:uppercase;letter-spacing:.06em;">Fri</span><span style="font-size:11px;color:var(--pine);">Sound Bath 7:30PM</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;">
+              <span style="font-size:10px;color:var(--pine);opacity:.5;text-transform:uppercase;letter-spacing:.06em;">Sat</span><span style="font-size:11px;color:var(--pine);">Flow 8AM</span>
+            </div>
+          </div>
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.3;">Mollie Yoga</div>
+        </div>
+      </div>
+      <div class="cap"><b>Schedule</b><span>4:5</span></div>
+    </div>
+
+    <!-- 3. MANTRA (Gita) -->
+    <div class="card">
+      <div class="plate r45" style="background:var(--lav);">
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 300 375">
+            <!-- drawn arcs framing text -->
+            <path d="M 30 80 Q 150 40 270 80" fill="none" stroke="#EFEAE0" stroke-width=".9" opacity=".35" stroke-linecap="round"/>
+            <path d="M 30 300 Q 150 340 270 300" fill="none" stroke="#EFEAE0" stroke-width=".9" opacity=".35" stroke-linecap="round"/>
+            <!-- brand mark small bottom right -->
+            <g transform="translate(228,300) scale(.4)" opacity=".3">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="#EFEAE0" stroke-width="2.5"/>
+              <path d="M50 18 Q63 34 50 50 Q37 34 50 18Z" fill="#EFEAE0"/>
+              <path d="M82 50 Q66 63 50 50 Q66 37 82 50Z" fill="#EFEAE0"/>
+              <path d="M50 82 Q37 66 50 50 Q63 66 50 82Z" fill="#EFEAE0"/>
+              <path d="M18 50 Q34 37 50 50 Q34 63 18 50Z" fill="#EFEAE0"/>
+              <circle cx="50" cy="50" r="4.5" fill="#EFEAE0"/>
+            </g>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--paper);opacity:.6;">Bhagavad Gita</div>
+          <div>
+            <div style="font-size:14px;color:var(--paper);line-height:1.65;font-weight:400;">You are what you believe in. You become that which you believe you can become.</div>
+          </div>
+          <div class="ey" style="font-size:9px;color:var(--paper);opacity:.3;">Mollie Yoga</div>
+        </div>
+      </div>
+      <div class="cap"><b>Mantra · Gita</b><span>4:5</span></div>
+    </div>
+
+    <!-- 4. RETREAT POSTER -->
+    <div class="card">
+      <div class="plate r45">
+        <img class="plate-img" src="https://i.pinimg.com/1200x/14/39/4c/14394caab95f6c6df925c7e7491af7c1.jpg" alt="">
+        <div class="wash" style="background:linear-gradient(to top, rgba(65,103,79,.88) 50%, rgba(65,103,79,.3) 100%);"></div>
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 300 375">
+            <!-- sweeping arc overlay -->
+            <path d="M -40 200 Q 150 -60 380 180" fill="none" stroke="#EFEAE0" stroke-width="1.2" opacity=".2" stroke-linecap="round"/>
+            <!-- squiggle bottom -->
+            <path d="M 20 330 Q 60 310 100 330 Q 140 350 180 330 Q 220 310 270 330" fill="none" stroke="#E3A23E" stroke-width="1" stroke-linecap="round" opacity=".5"/>
+            <!-- brand mark -->
+            <g transform="translate(16,16) scale(.45)" opacity=".5">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="#EFEAE0" stroke-width="2"/>
+              <path d="M50 18 Q63 34 50 50 Q37 34 50 18Z" fill="#EFEAE0"/>
+              <path d="M82 50 Q66 63 50 50 Q66 37 82 50Z" fill="#EFEAE0"/>
+              <path d="M50 82 Q37 66 50 50 Q63 66 50 82Z" fill="#EFEAE0"/>
+              <path d="M18 50 Q34 37 50 50 Q34 63 18 50Z" fill="#EFEAE0"/>
+              <circle cx="50" cy="50" r="4.5" fill="#EFEAE0"/>
+            </g>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div></div>
+          <div>
+            <div class="big" style="font-size:36px;color:var(--paper);">RETURN<br>TO SELF</div>
+            <div style="font-size:11px;color:var(--paper);opacity:.6;margin-top:12px;line-height:1.6;">Retreat · Byron Bay<br>14–21 March 2026</div>
           </div>
         </div>
       </div>
-      <div class="cap"><b>Weekly schedule</b><span>4:5</span></div>
+      <div class="cap"><b>Retreat Poster</b><span>4:5</span></div>
     </div>
-    <!-- 3 quote -->
-    <div class="card">
-      <div class="plate r45" style="--ac:#ff6a00;">
-        <div class="wash" style="background:#ff6a00;"></div>
-        <div class="copy center">
-          <svg viewBox="0 0 60 60" width="42" height="42" style="margin-bottom:14px;"><circle cx="30" cy="30" r="18" fill="none" stroke="#fff" stroke-width="4"/><circle cx="30" cy="30" r="8" fill="#fff"/></svg>
-          <div class="disp" style="font-size:21px;color:#fff;line-height:1.05;">LIVE YOUR<br>OWN<br>DESTINY</div>
-          <div style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-top:14px;">Bhagavad Gita</div>
-        </div>
-      </div>
-      <div class="cap"><b>Quote / mantra</b><span>4:5</span></div>
-    </div>
-    <!-- 4 poster -->
-    <div class="card">
-      <div class="plate r45" style="--ac:#0d0e16;">
-        <img class="plate-img" src="https://i.pinimg.com/1200x/70/10/36/701036930a74069d58476816688c414e.jpg" alt="">
-        <div class="wash" style="background:linear-gradient(180deg,rgba(43,60,245,.5),rgba(13,14,22,.78));"></div>
-        <div class="art"><svg width="100%" height="100%" viewBox="0 0 200 250" preserveAspectRatio="none"><circle cx="160" cy="40" r="22" fill="none" stroke="#ff6a00" stroke-width="5"/></svg></div>
-        <div class="copy center" style="justify-content:space-between;">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#ff6a00;">Retreat</span>
-          <div class="disp" style="font-size:28px;color:#fff;">ROOTS &amp;<br>RITUAL</div>
-          <div style="font-size:13px;font-weight:600;color:var(--mist);">14–16 June · Devon</div>
-        </div>
-      </div>
-      <div class="cap"><b>Poster / advert</b><span>retreat · 4:5</span></div>
-    </div>
-    <!-- 5 recent -->
-    <div class="card">
-      <div class="plate r45" style="--ac:#0d0e16;">
-        <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;">
-          <img class="plate-img" style="position:relative;" src="https://i.pinimg.com/1200x/f1/df/48/f1df481485d9581c858173754991b00a.jpg" alt="">
-          <img class="plate-img" style="position:relative;" src="https://i.pinimg.com/1200x/70/10/36/701036930a74069d58476816688c414e.jpg" alt="">
-          <div style="background:#2b3cf5;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 60 60" width="34" height="34"><circle cx="30" cy="30" r="16" fill="none" stroke="#fff" stroke-width="4"/><circle cx="30" cy="30" r="7" fill="#ff6a00"/></svg></div>
-          <img class="plate-img" style="position:relative;" src="https://i.pinimg.com/1200x/bc/c6/dd/bcc6ddbc63759184ac4b3f5cbd43ea82.jpg" alt="">
-        </div>
-      </div>
-      <div class="cap"><b>Recent classes / life</b><span>photos + seal · 4:5</span></div>
-    </div>
-  </div>
-</div>
 
-<!-- MANTRA BAND -->
-<div class="mantra" style="background:var(--cobalt);color:#fff;">
-  <div class="q disp" style="font-size:clamp(32px,5.5vw,76px);color:#fff;">WHEN DISTURBED,<br>THINK THE <span style="color:#ff6a00;">OPPOSITE.</span></div>
-  <div class="src" style="color:var(--mist);">Yoga Sutras · 2.33</div>
+    <!-- 5. LIFE / RECENT -->
+    <div class="card">
+      <div class="plate r45">
+        <img class="plate-img" src="https://i.pinimg.com/1200x/70/10/36/701036930a74069d58476816688c414e.jpg" alt="">
+        <div class="wash" style="background:linear-gradient(to top, rgba(158,140,196,.7) 0%, rgba(158,140,196,.2) 60%, transparent 100%);"></div>
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 300 375">
+            <path d="M 10 120 Q 50 90 90 120 Q 130 150 170 120 Q 210 90 260 110" fill="none" stroke="#EFEAE0" stroke-width="1" stroke-linecap="round" opacity=".3"/>
+            <!-- brand mark -->
+            <g transform="translate(220,16) scale(.45)" opacity=".4">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="#EFEAE0" stroke-width="2"/>
+              <path d="M50 18 Q63 34 50 50 Q37 34 50 18Z" fill="#EFEAE0"/>
+              <path d="M82 50 Q66 63 50 50 Q66 37 82 50Z" fill="#EFEAE0"/>
+              <path d="M50 82 Q37 66 50 50 Q63 66 50 82Z" fill="#EFEAE0"/>
+              <path d="M18 50 Q34 37 50 50 Q34 63 18 50Z" fill="#EFEAE0"/>
+              <circle cx="50" cy="50" r="4.5" fill="#EFEAE0"/>
+            </g>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:flex-end;">
+          <div class="ey" style="font-size:9px;color:var(--paper);opacity:.7;">Recent · Life</div>
+        </div>
+      </div>
+      <div class="cap"><b>Life / Recent</b><span>4:5</span></div>
+    </div>
+
+  </div>
 </div>
 
 <!-- STORIES -->
 <div class="section">
-  <div class="shead"><span class="eyebrow">Instagram — Stories &amp; Reels</span><span class="note">5 templates · 9:16</span></div>
+  <div class="shead"><div class="ey">03 · Talisman</div><h3>Stories · 9:16</h3></div>
   <div class="g5">
-    <!-- 1 -->
+
+    <!-- S1 SCHEDULE COVER -->
     <div class="card">
-      <div class="plate r916" style="--ac:#fff;">
-        <div class="wash" style="background:#fff;box-shadow:inset 0 0 0 3px #2b3cf5;"></div>
-        <div class="copy">
-          <div class="disp" style="font-size:24px;color:#0d0e16;">THIS WEEK</div>
-          <div style="margin-top:16px;font-size:14px;font-weight:600;color:#0d0e16;line-height:1.7;">
-            <div style="display:flex;align-items:center;gap:8px;text-decoration:line-through;opacity:.55;"><span style="width:10px;height:10px;background:#2b3cf5;"></span>Wed Yin 6pm</div>
-            <div style="display:flex;align-items:center;gap:8px;color:#ff6a00;margin-top:4px;"><span style="width:10px;height:10px;background:#ff6a00;"></span>Mollie covers<br>Thu 6pm</div>
-            <div style="opacity:.7;margin-top:8px;">all else as usual</div>
+      <div class="plate r916" style="background:var(--pine);">
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 200 355">
+            <!-- large orbit -->
+            <circle cx="100" cy="175" r="130" fill="none" stroke="#EFEAE0" stroke-width="1" opacity=".1"/>
+            <circle cx="100" cy="175" r="85" fill="none" stroke="#EFEAE0" stroke-width=".8" opacity=".08"/>
+            <!-- squiggle top -->
+            <path d="M 20 50 Q 60 30 100 50 Q 140 70 180 50" fill="none" stroke="#93B08C" stroke-width="1" stroke-linecap="round" opacity=".35"/>
+            <!-- squiggle bottom -->
+            <path d="M 20 310 Q 60 290 100 310 Q 140 330 180 310" fill="none" stroke="#93B08C" stroke-width="1" stroke-linecap="round" opacity=".35"/>
+            <!-- brand mark -->
+            <g transform="translate(65,140) scale(.7)" opacity=".25">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="#EFEAE0" stroke-width="2"/>
+              <path d="M50 18 Q63 34 50 50 Q37 34 50 18Z" fill="#EFEAE0"/>
+              <path d="M82 50 Q66 63 50 50 Q66 37 82 50Z" fill="#EFEAE0"/>
+              <path d="M50 82 Q37 66 50 50 Q63 66 50 82Z" fill="#EFEAE0"/>
+              <path d="M18 50 Q34 37 50 50 Q34 63 18 50Z" fill="#EFEAE0"/>
+              <circle cx="50" cy="50" r="4.5" fill="#EFEAE0"/>
+            </g>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--sage);">This Week</div>
+          <div style="text-align:center;">
+            <div class="big" style="font-size:44px;color:var(--paper);">ON<br>THE<br>MAT</div>
           </div>
+          <div class="ey" style="font-size:9px;color:var(--paper);opacity:.3;text-align:center;">@mollieyoga</div>
         </div>
       </div>
-      <div class="cap"><b>Weekly schedule</b><span>cover · 9:16</span></div>
+      <div class="cap"><b>Schedule Cover</b><span>9:16</span></div>
     </div>
-    <!-- 2 -->
+
+    <!-- S2 EVENT -->
     <div class="card">
-      <div class="plate r916" style="--ac:#0d0e16;">
-        <div class="wash" style="background:#0d0e16;"></div>
-        <div class="copy center" style="justify-content:space-between;">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#ff6a00;">Workshop</span>
-          <svg viewBox="0 0 80 80" width="64" height="64"><circle cx="40" cy="40" r="24" fill="none" stroke="#fff" stroke-width="5"/><circle cx="40" cy="40" r="11" fill="#ff6a00"/></svg>
-          <div class="disp" style="font-size:26px;color:#fff;">MOON<br>RITUAL</div>
-          <div style="width:100%;border:2px solid #ff6a00;color:#ff6a00;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:10px 0;border-radius:100px;">Reserve a mat ↑</div>
+      <div class="plate r916" style="background:var(--paper);">
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 200 355">
+            <path d="M -30 180 Q 100 60 230 160" fill="none" stroke="#41674F" stroke-width="1.2" opacity=".15" stroke-linecap="round"/>
+            <circle cx="160" cy="300" r="60" fill="none" stroke="#9E8CC4" stroke-width="1" opacity=".2"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="24" height="24" viewBox="0 0 100 100" style="flex-shrink:0;color:var(--pine);">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".4"/>
+              <path d="M50 18 Q63 34 50 50 Q37 34 50 18Z" fill="currentColor" opacity=".7"/>
+              <path d="M82 50 Q66 63 50 50 Q66 37 82 50Z" fill="currentColor" opacity=".7"/>
+              <path d="M50 82 Q37 66 50 50 Q63 66 50 82Z" fill="currentColor" opacity=".7"/>
+              <path d="M18 50 Q34 37 50 50 Q34 63 18 50Z" fill="currentColor" opacity=".7"/>
+              <circle cx="50" cy="50" r="4.5" fill="currentColor"/>
+            </svg>
+            <span class="ey" style="font-size:9px;color:var(--pine);opacity:.5;">Upcoming</span>
+          </div>
+          <div>
+            <div class="big" style="font-size:38px;color:var(--pine);">WINTER<br>SOLSTICE<br>FLOW</div>
+            <div style="font-size:11px;color:var(--pine);opacity:.55;margin-top:14px;line-height:1.6;">21 June · 6PM<br>Bondi Junction · All levels</div>
+          </div>
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.3;">Mollie Yoga</div>
         </div>
       </div>
-      <div class="cap"><b>Invite to book</b><span>event · 9:16</span></div>
+      <div class="cap"><b>Event Booking</b><span>9:16</span></div>
     </div>
-    <!-- 3 -->
+
+    <!-- S3 DAILY REFLECTION -->
     <div class="card">
-      <div class="plate r916" style="--ac:#0d0e16;">
-        <img class="plate-img" src="https://i.pinimg.com/1200x/70/10/36/701036930a74069d58476816688c414e.jpg" alt="">
-        <div class="wash" style="background:linear-gradient(180deg,rgba(43,60,245,.25),rgba(13,14,22,.72));"></div>
-        <div class="art"><svg width="100%" height="100%" viewBox="0 0 120 213" preserveAspectRatio="none"><line x1="16" y1="150" x2="74" y2="150" stroke="#ff6a00" stroke-width="5"/></svg></div>
-        <div class="copy" style="justify-content:flex-end;">
-          <div style="font-size:18px;font-weight:600;color:#fff;line-height:1.35;">found this on<br>my walk.</div>
-          <div style="margin-top:10px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#ff6a00;">Mollie Yoga</div>
+      <div class="plate r916" style="background:var(--paper);">
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 200 355">
+            <!-- drawn frame squiggles -->
+            <path d="M 20 30 Q 60 15 100 30 Q 140 45 180 30" fill="none" stroke="#41674F" stroke-width=".9" opacity=".2" stroke-linecap="round"/>
+            <path d="M 20 325 Q 60 340 100 325 Q 140 310 180 325" fill="none" stroke="#41674F" stroke-width=".9" opacity=".2" stroke-linecap="round"/>
+            <!-- centre mark -->
+            <g transform="translate(75,50) scale(.5)" opacity=".2">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="#41674F" stroke-width="2.5"/>
+              <path d="M50 18 Q63 34 50 50 Q37 34 50 18Z" fill="#41674F"/>
+              <path d="M82 50 Q66 63 50 50 Q66 37 82 50Z" fill="#41674F"/>
+              <path d="M50 82 Q37 66 50 50 Q63 66 50 82Z" fill="#41674F"/>
+              <path d="M18 50 Q34 37 50 50 Q34 63 18 50Z" fill="#41674F"/>
+              <circle cx="50" cy="50" r="4.5" fill="#41674F"/>
+            </g>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.4;">Daily Reflection</div>
+          <div style="text-align:center;">
+            <div style="font-size:13px;color:var(--pine);line-height:1.7;font-weight:300;">It is better to live your own destiny imperfectly than to live an imitation of somebody else's life with perfection.</div>
+            <div style="width:16px;height:.8px;background:var(--pine);opacity:.2;margin:18px auto;"></div>
+            <div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--pine);opacity:.4;">Bhagavad Gita</div>
+          </div>
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.3;text-align:center;">Mollie Yoga</div>
         </div>
       </div>
-      <div class="cap"><b>Daily-life reflection</b><span>light · 9:16</span></div>
+      <div class="cap"><b>Daily Reflection</b><span>9:16</span></div>
     </div>
-    <!-- 4 -->
+
+    <!-- S4 TESTIMONIAL -->
     <div class="card">
-      <div class="plate r916" style="--ac:#daddff;">
-        <div class="wash" style="background:#daddff;"></div>
-        <div class="copy center">
-          <svg viewBox="0 0 60 60" width="40" height="40" style="margin-bottom:14px;"><circle cx="30" cy="30" r="18" fill="none" stroke="#2b3cf5" stroke-width="4"/><circle cx="30" cy="30" r="8" fill="#ff6a00"/></svg>
-          <div style="font-size:20px;font-weight:700;color:#0d0e16;line-height:1.3;">“It feels like coming home to myself.”</div>
-          <div style="margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#2b3cf5;">— Sofia</div>
+      <div class="plate r916" style="background:var(--paper);">
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 200 355">
+            <!-- drawn border -->
+            <path d="M 16 16 Q 100 10 184 16 Q 190 100 184 339 Q 100 345 16 339 Q 10 250 16 16" fill="none" stroke="#41674F" stroke-width=".8" opacity=".18"/>
+            <!-- small orbits corner -->
+            <circle cx="170" cy="310" r="22" fill="none" stroke="#9E8CC4" stroke-width=".7" opacity=".25"/>
+            <circle cx="170" cy="310" r="12" fill="none" stroke="#9E8CC4" stroke-width=".6" opacity=".2"/>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <svg width="18" height="18" viewBox="0 0 100 100" style="flex-shrink:0;color:var(--pine);opacity:.4;">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="3"/>
+              <path d="M50 18 Q63 34 50 50 Q37 34 50 18Z" fill="currentColor"/>
+              <path d="M82 50 Q66 63 50 50 Q66 37 82 50Z" fill="currentColor"/>
+              <path d="M50 82 Q37 66 50 50 Q63 66 50 82Z" fill="currentColor"/>
+              <path d="M18 50 Q34 37 50 50 Q34 63 18 50Z" fill="currentColor"/>
+              <circle cx="50" cy="50" r="4.5" fill="currentColor"/>
+            </svg>
+            <span class="ey" style="font-size:9px;color:var(--pine);opacity:.4;">Student</span>
+          </div>
+          <div>
+            <div style="font-size:14px;color:var(--pine);line-height:1.7;font-weight:300;">"I walked in anxious and walked out myself again. Mollie holds space like no one else."</div>
+            <div style="font-size:10px;color:var(--pine);opacity:.4;margin-top:14px;">— Priya R.</div>
+          </div>
+          <div class="ey" style="font-size:9px;color:var(--pine);opacity:.3;">Mollie Yoga</div>
         </div>
       </div>
-      <div class="cap"><b>Testimonial</b><span>feedback · 9:16</span></div>
+      <div class="cap"><b>Testimonial</b><span>9:16</span></div>
     </div>
-    <!-- 5 -->
+
+    <!-- S5 REEL COVER -->
     <div class="card">
-      <div class="plate r916" style="--ac:#2b3cf5;">
-        <div class="wash" style="background:#2b3cf5;"></div>
-        <div class="copy center" style="justify-content:center;">
-          <svg viewBox="0 0 48 48" width="40" height="40" style="margin-bottom:16px;"><circle cx="24" cy="24" r="17" fill="none" stroke="#fff" stroke-width="2.5"/><path d="M19 16 L33 24 L19 32 Z" fill="#ff6a00"/></svg>
-          <div class="disp" style="font-size:26px;color:#fff;">MOON<br>FLOW</div>
-          <div style="margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);">Reel · watch</div>
+      <div class="plate r916" style="background:var(--pine);">
+        <div class="art">
+          <svg width="100%" height="100%" viewBox="0 0 200 355">
+            <!-- orbit rings -->
+            <circle cx="100" cy="175" r="140" fill="none" stroke="#EFEAE0" stroke-width="1" opacity=".08"/>
+            <circle cx="100" cy="175" r="95" fill="none" stroke="#EFEAE0" stroke-width=".8" opacity=".08"/>
+            <circle cx="100" cy="175" r="50" fill="none" stroke="#EFEAE0" stroke-width=".7" opacity=".1"/>
+            <!-- large mark centred -->
+            <g transform="translate(30,115) scale(1.4)" opacity=".18">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="#EFEAE0" stroke-width="1.5"/>
+              <path d="M50 18 Q63 34 50 50 Q37 34 50 18Z" fill="#EFEAE0"/>
+              <path d="M82 50 Q66 63 50 50 Q66 37 82 50Z" fill="#EFEAE0"/>
+              <path d="M50 82 Q37 66 50 50 Q63 66 50 82Z" fill="#EFEAE0"/>
+              <path d="M18 50 Q34 37 50 50 Q34 63 18 50Z" fill="#EFEAE0"/>
+              <circle cx="50" cy="50" r="4.5" fill="#EFEAE0"/>
+            </g>
+          </svg>
+        </div>
+        <div class="copy" style="justify-content:space-between;">
+          <div class="ey" style="font-size:9px;color:var(--sage);">Reel</div>
+          <div style="text-align:center;">
+            <div class="big" style="font-size:40px;color:var(--paper);">PRACTICE<br>LOG</div>
+            <div style="font-size:11px;color:var(--paper);opacity:.5;margin-top:10px;">with Mollie</div>
+          </div>
+          <div class="ey" style="font-size:9px;color:var(--paper);opacity:.3;text-align:center;">@mollieyoga</div>
         </div>
       </div>
-      <div class="cap"><b>Reel cover</b><span>9:16</span></div>
+      <div class="cap"><b>Reel Cover</b><span>9:16</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MANTRA BAND -->
+<div class="section">
+  <div class="shead"><div class="ey">03 · Talisman</div><h3>Mantra Treatments</h3></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);">
+    <div style="background:var(--paper);border-radius:4px;padding:48px 52px;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;">
+        <svg width="100%" height="100%" viewBox="0 0 600 220" preserveAspectRatio="xMidYMid slice">
+          <path d="M -50 180 Q 300 -40 650 160" fill="none" stroke="#41674F" stroke-width="1.2" opacity=".12" stroke-linecap="round"/>
+          <path d="M 480 20 Q 520 0 560 20 Q 520 40 480 20" fill="none" stroke="#9E8CC4" stroke-width="1" opacity=".2"/>
+        </svg>
+      </div>
+      <div style="position:relative;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <svg width="22" height="22" viewBox="0 0 100 100" style="flex-shrink:0;color:var(--pine);opacity:.4;">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M50 18 Q63 34 50 50 Q37 34 50 18Z" fill="currentColor"/>
+            <path d="M82 50 Q66 63 50 50 Q66 37 82 50Z" fill="currentColor"/>
+            <path d="M50 82 Q37 66 50 50 Q63 66 50 82Z" fill="currentColor"/>
+            <path d="M18 50 Q34 37 50 50 Q34 63 18 50Z" fill="currentColor"/>
+            <circle cx="50" cy="50" r="4.5" fill="currentColor"/>
+          </svg>
+          <span class="ey" style="font-size:9px;color:var(--pine);opacity:.4;">Yoga Sutras 2.33</span>
+        </div>
+        <div style="font-size:18px;color:var(--pine);line-height:1.6;font-weight:300;max-width:420px;">When disturbed by negative thoughts, opposite ones should be thought of.</div>
+      </div>
+    </div>
+    <div style="background:var(--lav);border-radius:4px;padding:48px 52px;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;">
+        <svg width="100%" height="100%" viewBox="0 0 600 220" preserveAspectRatio="xMidYMid slice">
+          <path d="M 20 40 Q 80 20 140 40 Q 200 60 260 40 Q 320 20 380 40" fill="none" stroke="#EFEAE0" stroke-width=".9" stroke-linecap="round" opacity=".2"/>
+          <circle cx="520" cy="160" r="60" fill="none" stroke="#EFEAE0" stroke-width=".8" opacity=".15"/>
+        </svg>
+      </div>
+      <div style="position:relative;">
+        <div class="ey" style="font-size:9px;color:var(--paper);opacity:.5;margin-bottom:20px;">Bhagavad Gita</div>
+        <div style="font-size:18px;color:var(--paper);line-height:1.6;font-weight:300;max-width:420px;">It is better to live your own destiny imperfectly than to live an imitation of somebody else's life with perfection.</div>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- CHAKRA DEMO -->
+<div class="section">
+  <div class="shead"><div class="ey">03 · Talisman</div><h3>Chakra Accent · Crown</h3></div>
+  <div style="background:var(--paper);border-radius:4px;padding:36px 44px;display:flex;align-items:center;gap:36px;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;">
+      <svg width="100%" height="100%" viewBox="0 0 900 120" preserveAspectRatio="xMidYMid slice">
+        <path d="M 700 -20 Q 760 60 700 140" fill="none" stroke="#8e6fc4" stroke-width="1" opacity=".2"/>
+        <circle cx="820" cy="60" r="40" fill="none" stroke="#8e6fc4" stroke-width=".8" opacity=".15"/>
+        <circle cx="820" cy="60" r="22" fill="none" stroke="#8e6fc4" stroke-width=".7" opacity=".12"/>
+      </svg>
+    </div>
+    <div style="width:56px;height:56px;border-radius:50%;background:#8e6fc4;flex-shrink:0;position:relative;"></div>
+    <div style="position:relative;">
+      <div style="font-size:22px;font-family:'Archivo',sans-serif;font-weight:700;text-transform:uppercase;color:var(--pine);">Sahasrara · Crown</div>
+      <div style="font-size:13px;color:var(--pine);opacity:.6;margin-top:8px;line-height:1.5;">Transcendence. Awareness. Unity. Crown accent for meditation, philosophy, and spiritual exploration posts.</div>
+    </div>
+    <div style="margin-left:auto;display:flex;gap:10px;position:relative;">
+      <div style="width:28px;height:28px;border-radius:50%;background:#c0392b;opacity:.4;"></div>
+      <div style="width:28px;height:28px;border-radius:50%;background:#e8722b;opacity:.4;"></div>
+      <div style="width:28px;height:28px;border-radius:50%;background:#f0c419;opacity:.4;"></div>
+      <div style="width:28px;height:28px;border-radius:50%;background:#4fb477;opacity:.4;"></div>
+      <div style="width:28px;height:28px;border-radius:50%;background:#3fa7d6;opacity:.4;"></div>
+      <div style="width:28px;height:28px;border-radius:50%;background:#3b5ba5;opacity:.4;"></div>
+      <div style="width:28px;height:28px;border-radius:50%;background:#8e6fc4;"></div>
+    </div>
+  </div>
+</div>
+
 </section>
 
-<!-- FOOTER -->
-<div class="foot">
-  <span>Mollie Yoga · Brand Concepts 2025</span>
-  <div>
-    <a href="#c1">01 · In Flow</a>
-    <a href="#c2">02 · Bloom</a>
-    <a href="#c3">03 · Talisman</a>
-  </div>
+<div style="height:120px;display:flex;align-items:center;justify-content:center;border-top:1px solid #222;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#333;">Mollie Yoga · Brand Concepts 2025</div>
 </div>
 
-<script>
-const tabs = document.querySelectorAll('.nav-tabs a');
-const sids = ['c1','c2','c3'];
-function updateActive(){
-  const y = window.scrollY + 140;
-  sids.forEach((id,i) => {
-    const el = document.getElementById(id);
-    if(!el) return;
-    tabs[i].classList.toggle('active', y >= el.offsetTop && y < el.offsetTop + el.offsetHeight);
-  });
-}
-window.addEventListener('scroll', updateActive, {passive:true});
-updateActive();
-</script>
 </body>
 </html>
